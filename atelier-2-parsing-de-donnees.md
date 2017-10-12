@@ -9,9 +9,13 @@ Optionals :
 * init par défaut, ou valeur nul ou optionals
 * Cast =&gt; ! et ?
 
+Pas la même architecture de fichier sur disque et dans le projet
+
 Enums
 
-Lazy var
+extension \(pour array à partir d'un fichier json\)
+
+
 
 Création du modèle \(struct / class; enum\)
 
