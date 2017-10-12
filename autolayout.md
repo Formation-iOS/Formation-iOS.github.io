@@ -36,7 +36,7 @@ S'il y a une erreur dans les contraintes d'Auto Layout, les lignes représentant
 
 ### Premier exemple avec 2 boutons
 
-Essayez de re-créer par vous même l'exemple de la demo live avec les 2 boutons de même taille qui restent toujours en bas de l'écran, quelque soit le device et l'orientation. Sélectionnez les différentes vues de devices dans Interface Builder \(les iPhones et iPads\), et les orientations portrait et paysage.
+Essayez de re-créer par vous même l'exemple de la demo live avec les 2 boutons de même taille qui restent toujours en bas de l'écran, quelques soient le device et l'orientation. Sélectionnez les différentes vues de devices dans Interface Builder \(les iPhones et iPads\), et les orientations portrait et paysage.
 
 ![](/assets/autolayout-2buttons-portrait.png)![](/assets/autolayout-2buttons-landscape.png)
 
