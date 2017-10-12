@@ -18,9 +18,17 @@ Cela se révèle bien utile quand on traduit une application de l'anglais à l'a
 
 ### Création d'un nouveau projet dans Xcode
 
+Dans Xcode, sélectionnez File-&gt;New-&gt;Project..., puis créez un projet « Single View App», et donnez lui le nom « AutoLayout » par exemple.
+
 ### Interface builder, l'outil de création des interfaces graphiques dans Xcode
 
-![](/assets/xcode-interface-builder.png)
+![](/assets/interface-builder.png)
+
+Tout d'abord, assurez-vous que votre fichier Main.storyboard utilise « Auto Layout ». Cela devrait déjà être le cas. ![](/assets/xcode-ib-use-auto-layout.png)
+
+Explorez Interface Builder, ces différents menu et onglets.
+
+![](/assets/add-missing-constraints.png)![](/assets/pin-constraints.png)![](/assets/align.png)![](/assets/edtior-menu.png)![](/assets/ib-devices-orientation.png)
 
 ### Premier exemple avec 2 boutons
 
