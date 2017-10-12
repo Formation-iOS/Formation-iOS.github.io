@@ -20,17 +20,35 @@ Cela se révèle bien utile quand on traduit une application de l'anglais à l'a
 
 Dans Xcode, sélectionnez File-&gt;New-&gt;Project..., puis créez un projet « Single View App», et donnez lui le nom « AutoLayout » par exemple.
 
-### Interface builder, l'outil de création des interfaces graphiques dans Xcode
+### Interface Builder, l'outil de création des interfaces graphiques dans Xcode
 
-![](/assets/interface-builder.png)
+#### Vue d'ensemble d'Interface Builder \(ou « IB »\) ![](/assets/interface-builder.png)
+
+#### Activation d'Auto Layout
 
 Tout d'abord, assurez-vous que votre fichier Main.storyboard utilise « Auto Layout ». Cela devrait déjà être le cas. ![](/assets/xcode-ib-use-auto-layout.png)
 
-Explorez Interface Builder, ces différents menu et onglets.
+#### Menus d'ajout des contraintes
 
-![](/assets/add-missing-constraints.png)![](/assets/pin-constraints.png)![](/assets/align.png)![](/assets/edtior-menu.png)![](/assets/ib-devices-orientation.png)
+Explorez Interface Builder, ses différents menu et onglets.
 
-En tenant la touche « ctrl » enfoncée, puis en cliquant et en gardant enfoncé sur un élément de l'interface graphique \(ex : un bouton\), un ligne bleue apparaît. En déposant sur un autre élément \(ex : un autre bouton\), on peut faire apparaître un menu d'édition des contraintes Auto Layout liant ces 2 éléments.
+Il y a tout d'abord les menus d'ajout des contraintes d'Auto Layout, en bas à droite de la zone centrale.![](/assets/add-missing-constraints.png)![](/assets/pin-constraints.png)![](/assets/align.png)
+
+#### Édition des proprietés d'un élément graphique
+
+Si on veut changer les proprietés d'un élément, on peut les modifier dans la partie « Inspector » sur la droite.![](/assets/button-attributes.png)
+
+#### Affichage sur différents devices et orientations
+
+On peut tester son interface graphique sur différents devices \(iPhones ou iPads\), et dans différentes orientations via la zone qui affiche des devices située en bas.![](/assets/ib-devices-orientation.png)
+
+#### Ajouter des contraintes entre 2 éléments de l'interface graphique
+
+En tenant la touche « ctrl » enfoncée, puis en cliquant et en gardant enfoncé sur un élément de l'interface graphique \(ex : un bouton\), un ligne bleue apparaît. En déposant sur un autre élément \(ex : un autre bouton\), on peut faire apparaître un menu d'édition des contraintes Auto Layout liant ces 2 éléments.![](/assets/click-drag.png)![](/assets/click-drag-menu.png)
+
+#### Menu Editor de Xcode
+
+Enfin, certaines actions d'interface builder déjà mentionnées peuvent être retrouvées dans le menu « Editor » d'Xcode.![](/assets/edtior-menu.png)
 
 ### Premier exemple avec 2 boutons
 
