@@ -1,4 +1,4 @@
-Notions nécessaires : 
+Notions nécessaires :
 
 Format date
 
@@ -10,12 +10,6 @@ Optionals :
 Enums
 
 Lazy var
-
-
-
-
-
-
 
 
 
