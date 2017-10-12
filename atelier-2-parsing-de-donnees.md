@@ -6,7 +6,7 @@ Installation de Pods : Alamofire
 
 Parsing à la main
 
-Utilisation d'une lib pour simplifier le code : [https://cocoapods.org/pods/Gloss](https://cocoapods.org/pods/Gloss)
+Utilisation de Codable pour simplifier le code : [https://cocoapods.org/pods/Gloss](https://cocoapods.org/pods/Gloss)
 
 Remplir écran dynamiquement
 
