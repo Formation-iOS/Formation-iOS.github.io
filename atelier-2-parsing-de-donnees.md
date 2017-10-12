@@ -1,3 +1,24 @@
+Notions nécessaires : 
+
+Format date
+
+Optionals :
+
+* init par défaut, ou valeur nul ou optionals
+* Cast =&gt; ! et ?
+
+Enums
+
+Lazy var
+
+
+
+
+
+
+
+
+
 Création du modèle \(struct / class; enum\)
 
 Séparation MVC
