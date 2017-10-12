@@ -16,41 +16,78 @@ Cela se révèle bien utile quand on traduit une application de l'anglais à l'a
 
 ## Auto Layout par la pratique
 
-### Création d'un nouveau projet dans Xcode
+Toutes les corrections des TPs sur Auto Layout sont disponibles sur GitHub.
 
 Dans Xcode, sélectionnez File-&gt;New-&gt;Project..., puis créez un projet « Single View App», et donnez lui le nom « AutoLayout » par exemple.
 
 ### Interface builder, l'outil de création des interfaces graphiques dans Xcode
 
+Voici à quoi ressemble la partie Interface Builder de Xcode, dans un projet qui contient déjà un bouton.
+
 ![](/assets/interface-builder.png)
 
-Tout d'abord, assurez-vous que votre fichier Main.storyboard utilise « Auto Layout ». Cela devrait déjà être le cas. ![](/assets/xcode-ib-use-auto-layout.png)
+### Activation de Auto Layout
 
-Explorez Interface Builder, ces différents menu et onglets.
+Tout d'abord, assurez-vous que votre fichier Main.storyboard utilise « Auto Layout ». Cela devrait déjà être le cas.
 
-![](/assets/add-missing-constraints.png)![](/assets/pin-constraints.png)![](/assets/align.png)![](/assets/edtior-menu.png)![](/assets/ib-devices-orientation.png)
+![](/assets/xcode-ib-use-auto-layout.png)
+
+### Édition des proprietés d'un élément de l'interface graphique
+
+Les différentes proprietés d'un élément de l'interface graphique peuvent être éditées dans la partie « Inspector », située à droite de la fenêtre Xcode.
+Par exemple, pour un UIButton, on peut configurer le titre, la taille du texte, sa couleur etc...
+
+![](/assets/button-attributes.png)
+
+### Menus pour ajouter des contraintes d'Auto Layout
+
+Explorez Interface Builder, ses différents menu et onglets. En bas à droite de la partie centrale d'Interface Builder, on trouve les menus d'ajout de contraintes.
+
+![](/assets/add-missing-constraints.png)
+![](/assets/pin-constraints.png)
+![](/assets/align.png)
+
+### Affichage sur différents devices et orientations
+
+En bas de la partie centrale d'Interface Builder, on trouve les différents devices et orientations. Ceci permet de prévisualiser le rendu de l'interface graphique, avant même de lancer l'applictaion dans le simulateur.
+
+![](/assets/ib-devices-orientation.png)
 
 #### Erreur dans les contraintes d'Auto Layout
 
-S'il y a une erreur dans les contraintes d'Auto Layout, les lignes représentant les contraintes vont apparaîtres en rouge. Par ailleurs, une flèche dans un rond rouge va apparaître dans la partie « explorateur » des éléments de la vue. Cliquez sur cette flèche pour voir le détail des erreurs.![](/assets/ib-error.png)
+S'il y a une erreur dans les contraintes d'Auto Layout, certaines lignes représentant les contraintes vont apparaître en rouge. Par ailleurs, une flèche dans un rond rouge va apparaître dans la partie « explorateur » des éléments de la vue. Cliquez sur cette flèche pour voir le détail des erreurs.
 
-### Premier exemple avec 2 boutons
+![](/assets/ib-error.png)
+
+### Menu Editor de Xcode
+
+Dans le menu Editor de Xcode, on retrouve également des actions déjà accessibles à d'autres endroits dans Interface Builder.
+
+![](/assets/editor-menu.png)
+
+### Premier exemple : les 2 boutons
 
 Essayez de re-créer par vous même l'exemple de la demo live avec les 2 boutons de même taille qui restent toujours en bas de l'écran, quelques soient le device et l'orientation.
 
 Pour valider que tout fonctionne comme voulu, sélectionnez les différentes vues de devices dans Interface Builder \(les iPhones et iPads\), et les orientations portrait et paysage. Également, lancez l'app dans différents simulateurs.
 
-![](/assets/autolayout-2buttons-portrait.png)![](/assets/autolayout-2buttons-landscape.png)
+![](/assets/autolayout-2buttons-portrait.png)
+![](/assets/autolayout-2buttons-landscape.png)
 
-### Deuxième exemple en ajoutant une image
+### Deuxième exemple : la galerie
 
-### Troisième exemple avec une galerie
+Essayez de re-créer par vous même le 2ème exemple de la demo live, qui affiche un écran découpé en 4 parties égales. Chaque partie est d'une couleur donnée, et affiche une image et un texte.
+Pensez bien à tenir compte de la « Safe Area ».
+Cet affichage doit fonctionner quelques soient le device et l'orientation. Testez notamment dans le simulateur de l'iPhone X.
+
+![](/assets/galerie-portrait.png)
+![](/assets/galerie-landscape.png)
 
 ### Auto Layout dans les UITableView
 
-## Pour aller plus loin
-
 ### Auto Layout dans les UIStackView et UIScrollView
+
+## Pour aller plus loin
 
 ### Création des contraintes d'Auto Layout dans le code
 
