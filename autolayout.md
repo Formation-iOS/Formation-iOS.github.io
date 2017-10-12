@@ -9,8 +9,7 @@ Aujourd'hui, Apple recommande de supporter iOS 10 et 11. Pour supporter tous les
 
 Auto Layout est l'outil indispensable pour répondre à ces problématiques. Il permet à l'interface graphique d'une application de s'adapter aux différents devices et orientations. Auto Layout réduit, agrandit, ou déplaçe les différents éléments de l'interface graphique, en fonction du device.
 
-Enfin, Auto Layout aide à gérer l'internationalisation d'une app. En effet, il permet à la mise en page de s'adapter en fonction de la longueur du texte.  
-Cela se révèle bien utile quand on traduit une application de l'anglais à l'allemand par exemple, car les mots allemands sont en général bien plus longs.
+Enfin, Auto Layout aide à gérer l'internationalisation d'une app. En effet, il permet à la mise en page de s'adapter en fonction de la longueur du texte. Cela se révèle bien utile quand on traduit une application de l'anglais à l'allemand par exemple, car les mots allemands sont en général bien plus longs.
 
 ## Auto Layout par la pratique
 
