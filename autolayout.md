@@ -20,6 +20,8 @@ Cela se révèle bien utile quand on traduit une application de l'anglais à l'a
 
 ### Interface builder, l'outil de création des interfaces graphiques dans Xcode
 
+![](/assets/xcode-interface-builder.png)
+
 ### Premier exemple avec 2 boutons
 
 ### Deuxième exemple en ajoutant une image
