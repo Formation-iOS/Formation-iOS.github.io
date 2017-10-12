@@ -56,7 +56,7 @@ Pour valider que tout fonctionne comme voulu, sélectionnez les différentes vue
 
 ### Size-class
 
-### Mise à jour des contraintes d'Auto Layout
+### Mise à jour des contraintes d'Auto Layout de manière dynamique
 
 
 
