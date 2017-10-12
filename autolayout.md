@@ -17,7 +17,7 @@ Enfin, Auto Layout aide à gérer l'internationalisation d'une app. En effet, il
 
 Dans Xcode, sélectionnez File-&gt;New-&gt;Project..., puis créez un projet « Single View App», et donnez lui le nom « AutoLayout » par exemple.
 
-### Interface Builder, l'outil de création des interfaces graphiques dans Xcode
+### Rappels sur Interface Builder, l'outil de création des interfaces graphiques dans Xcode
 
 #### Vue d'ensemble d'Interface Builder \(ou « IB »\) ![](/assets/interface-builder.png)
 
