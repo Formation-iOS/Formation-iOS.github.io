@@ -30,6 +30,8 @@ Explorez Interface Builder, ces différents menu et onglets.
 
 ![](/assets/add-missing-constraints.png)![](/assets/pin-constraints.png)![](/assets/align.png)![](/assets/edtior-menu.png)![](/assets/ib-devices-orientation.png)
 
+En tenant la touche « ctrl » enfoncée, puis en cliquant et en gardant enfoncé sur un élément de l'interface graphique \(ex : un bouton\), un ligne bleue apparaît. En déposant sur un autre élément \(ex : un autre bouton\), on peut faire apparaître un menu d'édition des contraintes Auto Layout liant ces 2 éléments.
+
 ### Premier exemple avec 2 boutons
 
 ### Deuxième exemple en ajoutant une image
