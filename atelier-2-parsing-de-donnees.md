@@ -13,6 +13,8 @@ Pas la même architecture de fichier sur disque et dans le projet
 
 Enums
 
+Déclaration implicite ou explicite
+
 extension \(pour array à partir d'un fichier json\)
 
 
