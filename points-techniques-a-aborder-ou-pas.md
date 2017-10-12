@@ -1,18 +1,18 @@
-# **Point de code spécifique à Swift **
+# Syntaxe** de code spécifique à Swift **
 
 ###### Potentiellement pour la version avancée de la formation
 
-defer
+* defer
+* implémentation par défaut dans les protocoles
 
-implémentation par défaut dans les protocoles
+* `enum result {`
 
-enum avec type ajouté : 
+      `case success`
 
-`enum result {`
+      `case failure (error: Error)`
 
-`case success`
+  `}`
 
-`case failure (error: Error) `
+* 
 
-`}`
 
