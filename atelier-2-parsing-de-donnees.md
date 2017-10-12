@@ -2,6 +2,8 @@ Notions nécessaires :
 
 Format date
 
+Format string
+
 Optionals :
 
 * init par défaut, ou valeur nul ou optionals
@@ -10,8 +12,6 @@ Optionals :
 Enums
 
 Lazy var
-
-
 
 Création du modèle \(struct / class; enum\)
 
