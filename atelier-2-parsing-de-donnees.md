@@ -26,7 +26,6 @@ Le but va être de parser le fichier suivant : BestMovie.json
 3. Transformez le contenu du fichier en un tableau de dictionnaire
 4. Parcourez ces dictionnaires pour créer des objets de type Movie
 5. Ajoutez une fonction description à la classe movie et faites un print des objets récupérés
-6. Pour vous faire gagner du temps, importez le fichier Swift suivant : JSONHelper.swift . Il vous permttra de récupérer facilement un tableau de dictionnaires à partir d'un fichier json local.
 
 **Conseil :** dans un premier temps considérez que les données sont parfaitement remplies. Cela va vous faire gagner du temps avec les optionnals. Dans un deuxième temps, faites un parsing plus robuste.
 
