@@ -43,7 +43,9 @@ Par exemple, pour un UIButton, on peut configurer le titre, la taille du texte, 
 Explorez Interface Builder, ses différents menu et onglets. En bas à droite de la partie centrale d'Interface Builder, on trouve les menus d'ajout de contraintes.
 
 ![](/assets/add-missing-constraints.png)
+
 ![](/assets/pin-constraints.png)
+
 ![](/assets/align.png)
 
 
@@ -89,30 +91,32 @@ Il suggère également des solutions pour résoudre le problème.
 )
 ```
 
-### Premier exemple : les 2 boutons
+### Premier exercice : les 2 boutons
 
-Essayez de re-créer par vous même l'exemple de la demo live avec les 2 boutons de même taille qui restent toujours en bas de l'écran, quelques soient le device et l'orientation.
+Essayez de re-créer par vous même l'exercice de la demo live avec les 2 boutons de même taille qui restent toujours en bas de l'écran, quelques soient le device et l'orientation.
 
 Pour valider que tout fonctionne comme voulu, sélectionnez les différentes vues de devices dans Interface Builder \(les iPhones et iPads\), et les orientations portrait et paysage. Également, lancez l'app dans différents simulateurs.
 
 ![](/assets/autolayout-2buttons-portrait.png)
+
 ![](/assets/autolayout-2buttons-landscape.png)
 
-### Deuxième exemple : la galerie
+### Deuxième exercice : la galerie
 
-Essayez de re-créer par vous même le 2ème exemple de la demo live, qui affiche un écran découpé en 4 parties égales. Chaque partie est d'une couleur donnée, et affiche une image et un texte.
+Essayez de re-créer par vous même le 2ème exercice de la demo live, qui affiche un écran découpé en 4 parties égales. Chaque partie est d'une couleur donnée, et affiche une image et un texte.
 Pensez bien à tenir compte de la « Safe Area ».
 Cet affichage doit fonctionner quelques soient le device et l'orientation. Testez notamment dans le simulateur de l'iPhone X.
 
 ![](/assets/galerie-portrait.png)
+
 ![](/assets/galerie-landscape.png)
 
-### Troisième exemple : Auto Layout dans les UITableView
+### Troisième exercice : Auto Layout dans les UITableView
 
 Dans cet exercice, vous allez devoir afficher une liste de films.
 Pour l'instant, la liste va contenir des données « en dur » dans votre code.
 
-Voici à quoi doit ressembler l'affichage de la liste des films. Notez que le titre des films peut prendre plusieurs lignes, par exemple « Guardians of the Galaxy Vol. 2 ». Dans ce cas le texte de la description prendra moins de place.
+Voici à quoi doit ressembler l'affichage de la liste des films. Notez que le titre des films peut prendre plusieurs lignes, par exercice « Guardians of the Galaxy Vol. 2 ». Dans ce cas le texte de la description prendra moins de place.
 
 ![](/assets/movies-tableview.png)
 
@@ -123,12 +127,38 @@ Quelques indices :
 
 Note : votre classe qui hérite de UITableViewCell devrait être définie dans son propre fichier .swift.
 
-### Quatrième exemple : cellules de taille dynamique avec Auto Layout
+### Quatrième exercice : cellules de taille dynamique avec Auto Layout
 
+Dans cet exercice, vous allez devoir afficher le détail d'un film. Continuez à partir de votre projet Xcode de l'exemple précédent (3ème exemple).
 
-### Cinquième exemple : Auto Layout dans les UIStackView et UIScrollView
+Lorsque l'utilisateur clique sur un film dans la liste des films, c'est cet écran de détail qui doit apparaître.
+Comme dans l'exercice précédent, le titre du film peut prendre plusieurs ligne. La différence est que la description doit à présent appraître complètement. L'utilisateur pourra faire défiler vers le bas si besoin (« scroll »).
+La taille de la cellule va donc dépendre à la fois de la taille du titre du film, mais aussi de sa description.
 
-Cet exemple est plus avancé. C'est un exercice en « bonus », au cas où vous avez eu le temps de réaliser les 4 exercices précédents.
+![](/assets/movie-detail.png)
+
+Pour cela, vous allez utiliser le calcul automatique de dimension de cellule d'une UITableView : UITableViewAutomaticDimension.
+
+```swift
+override func viewDidLoad() {
+    super.viewDidLoad()
+    
+    tableView.estimatedRowHeight = 361
+    tableView.rowHeight = UITableViewAutomaticDimension
+}
+```
+
+A vous de jouer, encore une fois, utilisez Auto Layout ! La cellule doit avoir une hauteur calculable. Elle contient l'image paysage, le titre, la note et la description du film. Spécifiez autant de contraintes que nécessaires entre ces éléments pour que la hauteur du tout puisse être calculée.  
+
+### Cinquième exercice : Auto Layout dans les UIStackView et UIScrollView
+
+Cet exercice est plus avancé. C'est un exercice en « bonus », au cas où vous avez eu le temps de réaliser les 4 exercices précédents.
+
+Il s'agit de re-implémenter la vue de détail précédente, mais en utilisant cette fois-ci une UIStackView dans une UIScrollView, contenues dans un UIViewController basique.
+
+[Documentation d'Apple : UIStackView](https://developer.apple.com/documentation/uikit/uistackview)
+
+[Une réponse sur Stackoverflow qui pourra vous aider](https://stackoverflow.com/questions/31668970/is-it-possible-for-uistackview-to-scroll/35136217#35136217)
 
 ## Pour aller plus loin
 
