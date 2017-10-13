@@ -13,6 +13,4 @@
 
   `}`
 
-* 
-
-
+* il faut parler des @2x @3x, mais dans quel chapitre ?

@@ -11,6 +11,8 @@ Auto Layout est l'outil indispensable pour répondre à ces problématiques. Il 
 
 Enfin, Auto Layout aide à gérer l'internationalisation d'une app. En effet, il permet à la mise en page de s'adapter en fonction de la longueur du texte. Cela se révèle bien utile quand on traduit une application, de l'anglais à l'allemand par exemple, car les mots allemands sont en général bien plus longs.
 
+Voici le lien vers la documentation d'Apple sur Auto Layout : [https://developer.apple.com/library/content/documentation/UserExperience/Conceptual/AutolayoutPG/index.html](https://developer.apple.com/library/content/documentation/UserExperience/Conceptual/AutolayoutPG/index.html)
+
 ## Auto Layout par la pratique
 
 Toutes les corrections des TPs sur Auto Layout sont disponibles sur GitHub.
@@ -50,17 +52,37 @@ En bas de la partie centrale d'Interface Builder, on trouve les différents devi
 
 ![](/assets/ib-devices-orientation.png)
 
+### Menu Editor de Xcode
+
+Dans le menu Editor de Xcode, on retrouve également des actions déjà accessibles à d'autres endroits dans Interface Builder.
+
+![](/assets/editor-menu.png)
+
 #### Erreur dans les contraintes d'Auto Layout
 
 S'il y a une erreur dans les contraintes d'Auto Layout, certaines lignes représentant les contraintes vont apparaître en rouge. Par ailleurs, une flèche dans un rond rouge va apparaître dans la partie « explorateur » des éléments de la vue. Cliquez sur cette flèche pour voir le détail des erreurs.
 
 ![](/assets/ib-error.png)
 
-### Menu Editor de Xcode
+### Erreur dans la console en lançant dans le simulateur
 
-Dans le menu Editor de Xcode, on retrouve également des actions déjà accessibles à d'autres endroits dans Interface Builder.
+Il est également possible d'avoir des erreurs qui apparaissent dans la console d'Xcode à l'exécution de l'application.
+Le message "Unable to simultaneously satisfy constraints." veut dire que Auto Layout n'a pas pu trouver une solution de mise en page pour satisfaire toutes les contraintes.
+Il suggère également des solutions pour résoudre le problème.
 
-![](/assets/editor-menu.png)
+```
+2017-10-13 09:22:28.125847+0200 Films[97857:2972007] [LayoutConstraints] Unable to simultaneously satisfy constraints.
+	Probably at least one of the constraints in the following list is one you don't want. 
+	Try this: 
+		(1) look at each constraint and try to figure out which you don't expect; 
+		(2) find the code that added the unwanted constraint or constraints and fix it. 
+(
+    "<NSLayoutConstraint:0x6000000995f0 UIImageView:0x7ffb9bd1b240.height == 150   (active)>",
+    "<NSLayoutConstraint:0x60400009e140 V:[UIImageView:0x7ffb9bd1b240]-(0)-|   (active, names: '|':UITableViewCellContentView:0x7ffb9bd1ab20 )>",
+    "<NSLayoutConstraint:0x60400009e190 V:|-(0)-[UIImageView:0x7ffb9bd1b240]   (active, names: '|':UITableViewCellContentView:0x7ffb9bd1ab20 )>",
+    "<NSLayoutConstraint:0x60400009f090 'UIView-Encapsulated-Layout-Height' UITableViewCellContentView:0x7ffb9bd1ab20.height == 150   (active)>"
+)
+```
 
 ### Premier exemple : les 2 boutons
 
@@ -80,17 +102,44 @@ Cet affichage doit fonctionner quelques soient le device et l'orientation. Teste
 ![](/assets/galerie-portrait.png)
 ![](/assets/galerie-landscape.png)
 
-### Auto Layout dans les UITableView
+### Troisième exemple : Auto Layout dans les UITableView
 
-### Auto Layout dans les UIStackView et UIScrollView
+Dans cet exercice, vous allez devoir afficher une liste de films.
+Pour l'instant, la liste va contenir des données « en dur » dans votre code.
+
+Voici à quoi doit ressembler l'affichage de la liste des films. Notez que le titre des films peut prendre plusieurs lignes, par exemple « Guardians of the Galaxy Vol. 2 ». Dans ce cas le texte de la description prendra moins de place.
+
+![](/assets/movies-tableview.png)
+
+Quelques indices :
+* utilisez un UINavigationController
+* utilisez un UITableViewController, avec des cellules de taille fixe
+* utilisez les notions de « Content Hugging Priority » et « Content Compression Resistance Priority »
+
+Note : votre classe qui hérite de UITableViewCell devrait être définie dans son propre fichier .swift.
+
+### Quatrième exemple : cellules de taille dynamique avec Auto Layout
+
+
+### Cinquième exemple : Auto Layout dans les UIStackView et UIScrollView
+
+Cet exemple est plus avancé. C'est un exercice en « bonus », au cas où vous avez eu le temps de réaliser les 4 exercices précédents.
 
 ## Pour aller plus loin
 
+Les points suivants ne sont pas abordés dans ce cours, car ils sont trop avancés. Néanmoins, il est bon de savoir qu'ils existent, pour y avoir recours au cas où les méthodes moins avancées sont trop limitantes.
+
 ### Création des contraintes d'Auto Layout dans le code
+
+[Documentation d'Apple : Programmatically Creating Constraints](https://developer.apple.com/library/content/documentation/UserExperience/Conceptual/AutolayoutPG/ProgrammaticallyCreatingConstraints.html#//apple_ref/doc/uid/TP40010853-CH16-SW1)
 
 ### Size-class
 
+[Documentation d'Apple : Size-Class-Specific Layout](https://developer.apple.com/library/content/documentation/UserExperience/Conceptual/AutolayoutPG/Size-ClassSpecificLayout.html#//apple_ref/doc/uid/TP40010853-CH26-SW1)
+
 ### Mise à jour des contraintes d'Auto Layout de manière dynamique
+
+[Documentation d'Apple : Changing Constraints](https://developer.apple.com/library/content/documentation/UserExperience/Conceptual/AutolayoutPG/ModifyingConstraints.html#//apple_ref/doc/uid/TP40010853-CH29-SW1)
 
 
 
