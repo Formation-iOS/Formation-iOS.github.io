@@ -46,6 +46,11 @@ Explorez Interface Builder, ses différents menu et onglets. En bas à droite de
 ![](/assets/pin-constraints.png)
 ![](/assets/align.png)
 
+
+### Hugging et Resistance
+
+![](/assets/hugging-resistance.png)
+
 ### Affichage sur différents devices et orientations
 
 En bas de la partie centrale d'Interface Builder, on trouve les différents devices et orientations. Ceci permet de prévisualiser le rendu de l'interface graphique, avant même de lancer l'applictaion dans le simulateur.
