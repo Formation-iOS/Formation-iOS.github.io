@@ -1,33 +1,20 @@
-Notions nécessaires :
+Notions nécessaires : format date, format string, optionals (init et cast), déclaration variable, extensions
 
-Format date
+# Parsing de données
 
-Format string
+## Introduction
 
-Optionals :
+Dans cet atelier nous allons créer un modèle de données correspondant à la base de TheMovieDB.
+Cela nous permettra de commencer à utiliser les concepts de Swift. Notamment les optionnels et les variables.
 
-* init par défaut, ou valeur nul ou optionals
-* Cast =&gt; ! et ?
-
-Pas la même architecture de fichier sur disque et dans le projet
-
-Enums
-
-Déclaration implicite ou explicite
-
-extension \(pour array à partir d'un fichier json\)
-
-
+# Étape 1
+Dans un nouveau projet Xcode (Single View Template) créez une classe Movie avec un titre, un
 
 Création du modèle \(struct / class; enum\)
 
 Séparation MVC
 
-Installation de Pods : Alamofire
-
 Parsing à la main
-
-Utilisation de Codable pour simplifier le code : [https://cocoapods.org/pods/Gloss](https://cocoapods.org/pods/Gloss)
 
 Remplir écran dynamiquement
 
