@@ -44,7 +44,7 @@ Le but de l'étape 2 était surtout de vous faire manipuler du Swift. En pratiqu
 1. Complétez l'écran de l'atelier précédent pour rajouter la note, la description et la date
 2. Remplissez l'écran avec les données du premier film de votre tableau
 
-## Exercice optionelle
+## Exercice bonus
 1. Ajoutez le fichier **Genre.json** à votre projet
 2. Ajouter le titre du genre du film à votre écran
 
