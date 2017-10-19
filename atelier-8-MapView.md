@@ -1,10 +1,3 @@
-UITableViewController
-
-Remplir cells dynamiquement
-
-Utiliser Segue pour passer info de la cell cliquée
-
-
 # MapView
 
 ## Introduction
@@ -17,7 +10,7 @@ Cela nous permettra de travailler sur les MapView, les annotations et les dépla
 
 ## Exercice 1- Première carte avec des points
 
-Dans ce première exercice, nous allons placer quelques points rigolos repérés sur Google Earth (point tirés de [LIEN])
+Dans ce première exercice, nous allons placer quelques points rigolos repérés sur Google Earth (données tirées de [LIEN])
 
 [SCREENSHOT]
 
@@ -27,9 +20,9 @@ Dans ce première exercice, nous allons placer quelques points rigolos repérés
 4. Créez une classe FunAnnotation. Cette classe doit :
         1. avoir un initializer de type 'required init(mapPoint: FunMapPoint)'
         2. implémenter le protocole MKAnnotation (et donc dériver de NSObject)
-5. Pour chaque point de votre liste, ajoutez une annotation à la carte
+5. Pour chaque point de votre liste, ajoutez une annotation à la carte (mapview.addAnnotation)
 6. Réglez ViewController comme le delegate de la MapView
-7. Implémentez le protocole MKMapViewDelegate. Notamment la fonction 'mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView?' qui doit renvoyer une MKMarkerAnnotationView
+7. Implémentez le protocole MKMapViewDelegate. Notamment la fonction 'mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView?' qui doit renvoyer une MKMarkerAnnotationView correctement remplis
 
 
 ## Exercice 2- Click sur les points d'interêt
