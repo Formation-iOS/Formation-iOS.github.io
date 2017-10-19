@@ -18,8 +18,8 @@ Cela nous permettra de travailler sur les transitions entre les écrans.
 ## Exercice 1- TableView statique
 
 1. Créer une TableView avec 3 cellules de film statiques :
-[SCREENSHOT]
 2. Au click sur la cellule ouvrez l'écran de détail en modal (toujours le même écran pour l'instant)
+[SCREENSHOT]
 
 ## Exercice 2- Navigation Controller
 
@@ -34,7 +34,7 @@ Nous allons maintenant afficher les données que l'on a parsé dans l'atelier pr
 
 1. Créez une classe MovieCell avec les outlets pour l'image et le titre
 2. Au click sur la cellule passez les informations du film à l'écran de détail (utilisation de tableView:didSelectRowAtIndexPath:)
-
+[SCREENSHOT]
 
 
 
