@@ -26,7 +26,7 @@ Cela nous permettra de travailler sur les transitions entre les écrans.
 Nous allons créer une navigation classique à base de 'Push'
 
 1. Intégrez votre liste de film dans un NavigationController
-2. Au click sur la cellule ouvrez l'écran de détail en mode push
+2. Au click sur la cellule ouvrez l'écran de détail en mode push (toujours le même écran pour l'instant)
 
 ## Exercice 3 - Données dynamiques
 
