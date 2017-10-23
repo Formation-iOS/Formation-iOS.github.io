@@ -26,6 +26,7 @@ Pour le geofencing nous avons besoin de la position de l'utilisateur même quand
 1. Supprimez l'application pour effacer les droits que vous aviez demandé précédemment
 2. Demandez le droit de localiser l'utilisateur tout le temps : requestAlwaysAuthorization
 3. Ajouter les variables NSLocationAlwaysAndWhenInUseUsageDescription et NSLocationAlwaysUsageDescription dans le info.plist
+4. Dans les réglages du projet > Capabilities > Background Mode, ajoutez LocationUpdates pour que le monitoring marche même quand l'app est passée au second plan
 
 ### Deuxième étape :
 Nous allons maintenant ajouter les points de geofencing quand la fonctionnalité est disponible
@@ -37,9 +38,16 @@ Nous allons maintenant ajouter les points de geofencing quand la fonctionnalité
 
 Note : didEnterRegion n'est pas activé si l'utilisateur est déjà dans la région au lancement de l'application.
 
-## Exercice 3 - Ajoutez des notifications locales
+## Exercice 3 - Envoyez des notifications locales
 
-[TODO]
+Quand l'utilisateur passe dans une zone d'interêt nous allons maintenant lui envoyer une notification sur son téléphone.
+
+1. Abonnez-vous aux notifications locales. Voir : `UNUserNotificationCenter.current().requestAuthorization` et `UNAuthorizationOptions`
+2. Quand l'utilisateur entre dans une région envoyer une `UNNotificationRequest` avec un `UNMutableNotificationContent` correctement remplis (le titre de l'emplacement par exemple)
+3. Implémentez le protocole `UNUserNotificationCenterDelegate` , ajouter des print et tester l'application en changeant la position du user dans le simulateur ou Xcode
+4. Ajoutez un `UNTimeIntervalNotificationTrigger` comme trigger de votre `UNNotificationRequest` afin d'avoir le temps de passer l'application en tâche de fond avant que la notification ne soit lancée
+
+Note : plutôt que de faire comme l'on vient de faire, il existe une option pour envoyer automatiquement une notification quand l'utilisateur est proche d'une position avec `UNLocationNotificationTrigger` (https://useyourloaf.com/blog/local-notifications-with-ios-10/)
 
 ## Exercice bonus - Gérez le cas où l'utilisateur n'accepte pas de donner sa position tout le temps
 Le Region Monitoring fonctionne uniquement avec .authorizedAlways et pas avec .authorizedWhenInUse. Aidons l'utilisateur à comprendre ce qu'il se passe.
