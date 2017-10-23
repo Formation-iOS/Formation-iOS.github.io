@@ -7,4 +7,5 @@
 * [Atelier 3 - Navigation](atelier-3-navigation.md)
 * [Atelier 4 - Auto Layout](atelier-4-autolayout.md)
 * [Atelier 5 - Networking avec Alamofire](atelier-5-networking.md)
+* [Atelier 6 - Connexion et compte utilisateur](atelier-6-login.md)
 * [Points techniques à aborder \(ou pas\)](points-techniques-a-aborder-ou-pas.md)
