@@ -6,7 +6,7 @@ Dans cet atelier nous allons créer un modèle de données correspondant à la b
 
 Cela nous permettra de commencer à utiliser les concepts de Swift. Notamment les optionnels et les variables.
 
-**Notions nécessaires :** optionals \(init et cast\), MVC, déclaration de variables, extensions, MVC, format de dates, format de string
+**Notions nécessaires :** optionals \(init et cast\), MVC, déclaration de variables, extensions, format de dates, format de string
 
 ## Exercice 1- Création du modèle
 
