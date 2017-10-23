@@ -11,6 +11,8 @@ Pour simplifier le code qui effectue les requêtes vers cette API, nous allons u
 Un « pod » est une bibliothèque (« library »), une brique logicielle, pour les projets Swift et Objective-C.
 Le système de gestion de dépendances qui gère les « pods » s'appelle « Cocoapods » : [https://cocoapods.org/](https://cocoapods.org/).
 
+**Notions nécessaires :** Pods et cocoapods, networking avec Alamofire
+
 ## Cocoapods
 
 Tout d'abord, il faut installer Cocoapods sur votre machine. Cocoapods est un outil Ruby, et Ruby est déjà disponible sur macOS.
@@ -145,6 +147,16 @@ https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=b692
 
 Réutilisez le code que vous avez utilisé pour le parsing de données provenant de fichiers .json.
 Remplacez ce code par un appel à l'API, en utilisant Alamofire, ainsi que les Codable et JSONDecoder vus précédemment.
+
+Exemple de requête GET avec Alamofire :
+
+```swift
+Alamofire.request("https://httpbin.org/get").responseJSON { response in
+    print("Request: \(String(describing: response.request))")   // original url request
+    print("Response: \(String(describing: response.response))") // http url response
+    print("Result: \(response.result)")                         // response serialization result
+}
+```
 
 ### 2ème partie : affichage des images via le pod AlamofireImage
 

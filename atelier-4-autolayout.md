@@ -13,6 +13,8 @@ Enfin, Auto Layout aide à gérer l'internationalisation d'une app. En effet, il
 
 Voici le lien vers la documentation d'Apple sur Auto Layout : [https://developer.apple.com/library/content/documentation/UserExperience/Conceptual/AutolayoutPG/index.html](https://developer.apple.com/library/content/documentation/UserExperience/Conceptual/AutolayoutPG/index.html)
 
+**Notions nécessaires :** Contraintes de layout, hugging et resistance, Safe Area
+
 ## Auto Layout par la pratique
 
 Toutes les corrections des TPs sur Auto Layout sont disponibles sur GitHub.
