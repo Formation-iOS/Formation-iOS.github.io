@@ -11,7 +11,7 @@ Pour simplifier le code qui effectue les requêtes vers cette API, nous allons u
 Un « pod » est une bibliothèque (« library »), une brique logicielle, pour les projets Swift et Objective-C.
 Le système de gestion de dépendances qui gère les « pods » s'appelle « Cocoapods » : [https://cocoapods.org/](https://cocoapods.org/).
 
-**Notions nécessaires :** Pods et cocoapods, networking avec Alamofire
+**Notions nécessaires :** Pods et cocoapods, networking avec Alamofire, Swift closures
 
 ## Cocoapods
 
@@ -157,6 +157,21 @@ Alamofire.request("https://httpbin.org/get").responseJSON { response in
     print("Result: \(response.result)")                         // response serialization result
 }
 ```
+
+Alamofire utilise les closures Swift. Une closure Swift est un bloc de code « indépendant ».
+Par exemple, on peut le passer en paramètre à des fonctions, dans le but de l'appeller dans l'implémentation de la fonction. C'est alors une sorte de « callback ».
+Une closure peut capturer des variables du contexte dans lequel elle est défini. Cette notion de capture s'appelle « closing over », d'où le terme « closure ».
+Dans l'exemple précédent, cette partie est une closure :
+
+```swift
+{ response in
+    print("Request: \(String(describing: response.request))")   // original url request
+    print("Response: \(String(describing: response.response))") // http url response
+    print("Result: \(response.result)")                         // response serialization result
+}
+```
+
+Il s'agit du bloc de code qui sera appellé par la méthode « responseJSON » quand la réponse à la requête sera arrivée. Notez que dans ce cas, cet appel à la closure ce fera de manière asynchrone.
 
 ### 2ème partie : affichage des images via le pod AlamofireImage
 

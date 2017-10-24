@@ -19,7 +19,7 @@ Pour cela, vous allez :
 4. informer l'utilisateur que l'app est en train d'effectuer la connexion
 5. informer l'utilisateur que l'identifiant ou le mot de passe ne sont pas corrects, le cas échéant
 
-**Notions nécessaires :** Formulaire, UITextField, gestion du clavier, Keychain, UserDefaults, authentification, Swift closures, feedback utilisateur et indicateur d'activité, gestion d'erreurs avec UIAlertController
+**Notions nécessaires :** Formulaire, UITextField, gestion du clavier, Keychain, UserDefaults, authentification, feedback utilisateur et indicateur d'activité, gestion d'erreurs avec UIAlertController
 
 ## 1er exercice : création d'un formulaire de connexion
 
@@ -45,13 +45,28 @@ Validez que tout fonctionne correctement en lançant l'application dans le simul
 
 ## 2ème exercice : connexion à l'API de login et persistence de la session
 
+### Rappel sur les closures
+
 Vous allez implémenter une fonction "login", que vous appellerez dans votre view controller :
 
 ```swift
 static func login(username: String, password: String, result: @escaping (Error?) -> Void) {
-...
+    ...
 }
 ```
+
+Note : cette fonction login prend en paramètre une closure, appellée « result ».
+Si vous utilisez l'auto-complétion dans Xcode, celui-ci génèrera le code ci-dessous pour appeller cette fonction login.
+Cette syntaxe s'appelle « trailing closure », et c'est un « syntactic sugar » de Swift.
+On peut avoir l'impression que la closure n'est plus un argument de la fonction, mais c'est bien toujours le cas.
+
+```swift
+APIRequestManager.login(username: email, password: password) { (error) in
+    ...
+}
+```
+
+### API de login
 
 La connexion à l'API de themoviedb.org est une succession de 3 requêtes GET. Il va falloir enchaîner ces 3 requêtes avec des appels à Alamofire.
 A la fin, on obtient un « session_id », qui pourra être utilisé dans la requête qui permet d'ajouter un film à la « Watchlist ».
@@ -97,6 +112,8 @@ https://api.themoviedb.org/3/authentication/session/new?api_key=b692eafd258dae82
   "session_id": "56e8124c66793653f5abcda02675423ceb3205d9"
 }
 ```
+
+### Keychain
 
 En cas de succès, c'est à dire lorsque l'app récupère un « session_id », vous pouvez sauvegarder l'identifiant et le mot de passe de l'utilisateur, ainsi que le « session_id ».
 Ces informations doivent être persistées dans un endroit sécurisé : pour cela, vous allez utiliser la Keychain.
@@ -174,3 +191,7 @@ Si vous voulez en savoir, vous pouvez lire la [documentation Facebook](https://d
 
 Comme mentionné plus haut, la gestion du clavier sans UITableViewController nécessite d'écrire du code spécifique pour répondre à l'apparition et à la disparition du clavier, comme décrit dans la [documentation d'Apple](https://developer.apple.com/library/content/documentation/StringsTextFonts/Conceptual/TextAndWebiPhoneOS/KeyboardManagement/KeyboardManagement.html).
 Écrire du code pour gérer le clavier n'est pas trivial, et même l'exemple d'Apple ne gère pas correctement certains détails. Il existe également des pods qui gèrent le clavier, comme par exemple IQKeyboardManager.
+
+### Autre pod pour le feedback utilisateur
+
+[SwiftMessage](https://cocoapods.org/?q=SwiftMessage) est un pod qui permet d'afficher des messages à l'utilisateur, de manière moins intrusive et plus flexible que UIAlertController.
