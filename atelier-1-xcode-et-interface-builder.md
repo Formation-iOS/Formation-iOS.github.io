@@ -6,7 +6,7 @@ Dans cet atelier nous allons créer une première interface simple avec un peu d
 
 Cela nous permettra de découvrir XCode, l'organisation d'un projet et le très pratique Interface Builder.
 
-**Notions nécessaires :** MVC, différents types de ficher (.swift, .storyboard, assets), ressources (images, données...), ratio d'image, UILabel et UIImage
+**Notions nécessaires :** MVC, IBOutlet/IBAction, différents types de ficher (.swift, .storyboard, assets), ressources (images, données...), ratio d'image, UILabel et UIImage
 
 ## Exercice 1- Première interface
 
@@ -20,9 +20,9 @@ Cela nous permettra de découvrir XCode, l'organisation d'un projet et le très 
 Le but ici va être d'ajouter un bouton qui permet de changer de film en changent le titre et l'image affichée à l'écran.
 
 1. Ajoutez un bouton à l'interface
-2. Ajoutez une action à ce bouton (IBAction)
+2. Ajoutez une action `buttonClicked` à ce bouton (IBAction)
 3. Créez un lien entre l'image, le titre et le code de ViewController (IBOutlet)
-4. Dans le code de l'action, changez l'image et le titre affichés à l'écran
+4. Dans le code de l'action, changez l'image et le titre affichés à l'écran : `imageView.image =` et  `titleLabel.text = `
 
 ## Exercice bonus
 
