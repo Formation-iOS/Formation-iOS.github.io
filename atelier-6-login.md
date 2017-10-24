@@ -104,9 +104,9 @@ Ces informations doivent être persistées dans un endroit sécurisé : pour cel
 La Keychain est une base de données cryptée, fournie par iOS.
 C'est dans cette base de données qu'il faut stocker les secrets tels que les mots de passe, ou les tokens d'authentification qui permettent d'accéder à un service au nom d'un utilisateur.
 
-Dans le cadre de l'application catalogue de films, vous pouvez utiliser le pod [https://cocoapods.org/pods/KeychainSwift](KeychainSwift) pour sauvegarder et récupérer le mot de passe, ainsi que le session_id de l'utilisateur.
+Dans le cadre de l'application catalogue de films, vous pouvez utiliser le pod [KeychainSwift](https://cocoapods.org/pods/KeychainSwift) pour sauvegarder et récupérer le mot de passe, ainsi que le session_id de l'utilisateur.
 
-Si vous voulez en savoir plus, vous pouvez lire [https://developer.apple.com/library/content/documentation/Security/Conceptual/keychainServConcepts/02concepts/concepts.html](la documentation d'Apple sur la Keychain).
+Si vous voulez en savoir plus, vous pouvez lire [la documentation d'Apple sur la Keychain](https://developer.apple.com/library/content/documentation/Security/Conceptual/keychainServConcepts/02concepts/concepts.html).
 
 ## 3ème exercice : feedback utilisateur, gestion des cas d'erreurs
 
@@ -146,7 +146,7 @@ Il est donc important de tester une app en conditions réelles, et c'est justeme
 
 ### Affichage des erreurs avec UIAlertController
 
-Lorsque l'utilisateur entre un identifiant ou un mot de passe incorrects, il faut lui afficher une message d'erreur.
+Lorsque l'utilisateur entre un identifiant ou un mot de passe incorrects, il faut lui afficher un message d'erreur.
 Pour cela, nous allons utiliser un UIAlertController.
 
 ```swift
