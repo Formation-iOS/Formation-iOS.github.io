@@ -19,7 +19,7 @@ Pour cela, vous allez :
 4. informer l'utilisateur que l'app est en train d'effectuer la connexion
 5. informer l'utilisateur que l'identifiant ou le mot de passe ne sont pas corrects, le cas échéant
 
-**Notions nécessaires :** Formulaire, UITextField, gestion du clavier, Keychain, UserDefaults, authentification, Swift closures
+**Notions nécessaires :** Formulaire, UITextField, gestion du clavier, Keychain, UserDefaults, authentification, Swift closures, feedback utilisateur et indicateur d'activité, gestion d'erreurs avec UIAlertController
 
 ## 1er exercice : création d'un formulaire de connexion
 
@@ -101,9 +101,20 @@ https://api.themoviedb.org/3/authentication/session/new?api_key=b692eafd258dae82
 En cas de succès, c'est à dire lorsque l'app récupère un « session_id », vous pouvez sauvegarder l'identifiant et le mot de passe de l'utilisateur, ainsi que le « session_id ».
 Ces informations doivent être persistées dans un endroit sécurisé : pour cela, vous allez utiliser la Keychain.
 
-TODO : expliquer la sauvegarde dans la Keychain, et ce qu'est la Keychain.
+La Keychain est une base de données cryptée, fournie par iOS.
+C'est dans cette base de données qu'il faut stocker les secrets tels que les mots de passe, ou les tokens d'authentification qui permettent d'accéder à un service au nom d'un utilisateur.
+
+Dans le cadre de l'application catalogue de films, vous pouvez utiliser le pod [https://cocoapods.org/pods/KeychainSwift](KeychainSwift) pour sauvegarder et récupérer le mot de passe, ainsi que le session_id de l'utilisateur.
+
+Si vous voulez en savoir plus, vous pouvez lire [https://developer.apple.com/library/content/documentation/Security/Conceptual/keychainServConcepts/02concepts/concepts.html](la documentation d'Apple sur la Keychain).
 
 ## 3ème exercice : feedback utilisateur, gestion des cas d'erreurs
+
+Dans cette partie, vous allez ajouter 2 types de feedback pour l'utilisateur :
+1. un indicateur d'activité pendant que l'application essaye de se connecter à themoviedb.org
+2. un message d'erreur dans une alerte, quand l'utilisateur entre un identifiant ou un mot de passe incorrect
+
+### Indicateur d'activité
 
 Pendant que la requête est en train de se faire en tâche de fond, l'utilisateur n'a aucun feedback. Ce serait encore plus flagrant si le réseau était lent.
 Pour que l'expérience utilisateur soit bonne, il est important de l'informer du fait que l'app est en train de réaliser la connexion.
@@ -119,6 +130,9 @@ hud.label.text = "Connexion en cours..."
 hud.hide(animated: true)
 ```
 
+![](/assets/progress.png)
+
+
 Note : il existe un outil pour simuler un réseau lent sur macOS : le Network Link Conditioner.
 Ce dernier peut être installé via le package « Additional Tools for Xcode », disponible sur le Developer portal d'Apple. 
 
@@ -130,6 +144,21 @@ Il est donc important de tester une app en conditions réelles, et c'est justeme
 
 ![](/assets/network-link-conditioner-iphone.png)
 
+### Affichage des erreurs avec UIAlertController
+
+Lorsque l'utilisateur entre un identifiant ou un mot de passe incorrects, il faut lui afficher une message d'erreur.
+Pour cela, nous allons utiliser un UIAlertController.
+
+```swift
+let alertController = UIAlertController(title: "Titre", message: "Message", preferredStyle: .alert)
+let okAction = UIAlertAction(title: "OK", style: .default)
+alertController.addAction(okAction)
+present(alertController, animated: true, completion:nil)
+
+```
+
+![](/assets/alertcontroller.png)
+
 ## 4ème exercice (optionel) : implémenter l'ajout à la « Watchlist »
 
 Si vous avez le temps, vous pouvez implémenter l'ajout d'un film à la « Watchlist ». Voici la requête à effectuer : [https://developers.themoviedb.org/3/account/add-to-watchlist](https://developers.themoviedb.org/3/account/add-to-watchlist).
@@ -138,9 +167,10 @@ Si vous avez le temps, vous pouvez implémenter l'ajout d'un film à la « Watch
 
 ### Connection avec Facebook
 
-TODO
+De nombreuses applications permettent à l'utilisateur de se connecter via leur compte Facebook, dans le cadre d'une authentification OAuth2.
+Si vous voulez en savoir, vous pouvez lire la [documentation Facebook](https://developers.facebook.com/docs/facebook-login/ios) sur le sujet.
 
 ### Gestion du clavier en dehors d'un UITableViewController
 
-TODO
-
+Comme mentionné plus haut, la gestion du clavier sans UITableViewController nécessite d'écrire du code spécifique pour répondre à l'apparition et à la disparition du clavier, comme décrit dans la [documentation d'Apple](https://developer.apple.com/library/content/documentation/StringsTextFonts/Conceptual/TextAndWebiPhoneOS/KeyboardManagement/KeyboardManagement.html).
+Écrire du code pour gérer le clavier n'est pas trivial, et même l'exemple d'Apple ne gère pas correctement certains détails. Il existe également des pods qui gèrent le clavier, comme par exemple IQKeyboardManager.
