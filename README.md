@@ -1,8 +1,3 @@
-# Formation Swift à destination de développeurs objet
+# Formation iOS : Développement mobile en langage Swift
 
-This file file serves as your book's preface, a great place to describe your book's content and ideas.
-
-
-
-test 
-
+Ce livret contient la liste des ateliers de la formation.
