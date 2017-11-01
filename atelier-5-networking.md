@@ -182,10 +182,3 @@ Ce nom est fourni dans le json de la liste des films (poster_path et backdrop_pa
 
 Utilisez le pod AlamofireImage pour afficher les images des posters dans la liste des films, puis l'image backdrop dans l'écran de détail d'un film.
 
-## Debug avec Xcode
-
-## Notion de threading
-
-## Cycle de vie d'un UIViewController
-
-## Cycle de vie d'une app

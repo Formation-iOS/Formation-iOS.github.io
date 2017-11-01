@@ -13,7 +13,7 @@ Enfin, Auto Layout aide à gérer l'internationalisation d'une app. En effet, il
 
 Voici le lien vers la documentation d'Apple sur Auto Layout : [https://developer.apple.com/library/content/documentation/UserExperience/Conceptual/AutolayoutPG/index.html](https://developer.apple.com/library/content/documentation/UserExperience/Conceptual/AutolayoutPG/index.html)
 
-**Notions nécessaires :** Contraintes de layout, hugging et resistance, Safe Area
+**Notions nécessaires :** Contraintes de layout, notion de « intrinsic content size », hugging et resistance, Safe Area
 
 ## Auto Layout par la pratique
 
@@ -177,6 +177,3 @@ Les points suivants ne sont pas abordés dans ce cours, car ils sont trop avanc�
 ### Mise à jour des contraintes d'Auto Layout de manière dynamique
 
 [Documentation d'Apple : Changing Constraints](https://developer.apple.com/library/content/documentation/UserExperience/Conceptual/AutolayoutPG/ModifyingConstraints.html#//apple_ref/doc/uid/TP40010853-CH29-SW1)
-
-
-
