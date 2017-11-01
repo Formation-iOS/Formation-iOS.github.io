@@ -41,7 +41,9 @@ Le but de l'étape 2 était surtout de vous faire manipuler du Swift. En pratiqu
 
 ## Exercice bonus - Affichage des données
 
-1. Complétez l'écran de l'atelier précédent pour rajouter la note et la date
-2. Remplissez l'écran avec les données du premier film de votre tableau
+1. Reprenez l'écran de l'atelier précédent et rajouter la note et la date
+Note : ne vous inquiétez pas si le layout s'adapte mal aux tailles d'écrans
+2. Remplissez l'écran avec les données du premier film de votre tableau. Utilisez les outlets et changez les valeurs dans viewDidLoad
+Note : laissez une image fixe pour l'instant
 
-[SCREENSHOT]
+![](/assets/Parsing_Bonus.png)
