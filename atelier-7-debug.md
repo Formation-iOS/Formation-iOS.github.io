@@ -43,23 +43,13 @@ Cliquez sur le bouton « Add to watchlist ». Il ne se passe rien.
 Vous avez fait en sorte qu'il se passe quelque chose lorsque vous cliquez sur le bouton « Ajouter à ma Watchlist ».
 Mais à présent un crash se produit juste après.
 
-## Le tab « Watchlist » ne se met pas à jour
-
-Le tab qui affiche la « Watchlist » ne se met pas à jour quand vous ajoutez un film à la « Watchlist ».
-Indication : utilisez le [NotificationCenter](https://developer.apple.com/documentation/foundation/nsnotificationcenter).
-
 ## La vue de détail d'un film ne s'affiche pas correctement
 
 Une partie de la vue de détail d'un film ne s'affiche pas correctement : la description du film est coupée.
 
-## La liste des « Popular Movies » ne se met pas à jour quand on revient dans l'app
+## Les cellules des films n'affichent pas correctement les notes moyennes en rouge
 
-La liste des « Popular Movies » ne se met pas à jour quand on appuye sur le bouton « home » de l'iPhone, puis qu'on revient dans l'app.
-
-## Les cellules des films n'ont pas toujours la bonne image
-
-Supprimez l'application. Relancez la avec Xcode, et scrollez rapidement dans la liste des « Popular Movies ».
-Vous allez remarquer que certaines cellules peuvent afficher une image qui ne correspond pas à la description.
+Dans la liste des films, la note d'un film devrait s'afficher en rouge si la note est plus grande que 8. Mais ce n'est pas le cas.
 
 ## Un problème de mémoire
 
@@ -67,3 +57,12 @@ Cliquez sur quelques films pour voir leur détail.
 Ensuite, utilisez l'outil « Debug memory graph » pour observer l'utilisation de la mémoire dans l'application.
 
 Il y a un problème de mémoire. Lequel ?
+
+## Le tab « Watchlist » ne se met pas à jour
+
+Le tab qui affiche la « Watchlist » ne se met pas à jour quand vous ajoutez un film à la « Watchlist ».
+Indication : utilisez le [NotificationCenter](https://developer.apple.com/documentation/foundation/nsnotificationcenter).
+
+## La liste des « Popular Movies » ne se met pas à jour quand on revient dans l'app
+
+La liste des « Popular Movies » ne se met pas à jour quand on appuye sur le bouton « home » de l'iPhone, puis qu'on revient dans l'app.
