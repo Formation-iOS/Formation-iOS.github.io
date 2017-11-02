@@ -10,7 +10,7 @@ Cela nous permettra de travailler sur les MapView, les annotations et les dépla
 
 ## Exercice 1- Première carte avec des points
 
-Dans ce première exercice, nous allons placer quelques points rigolos repérés sur Google Earth (données tirées de [LIEN])
+Dans ce première exercice, nous allons placer quelques points rigolos repérés sur Google Earth (données tirées de http://twistedsifter.com/2014/02/50-amazing-finds-on-google-earth/)
 
 ![](/assets/MapView_MapOverview.png)
 
@@ -30,7 +30,7 @@ Dans ce première exercice, nous allons placer quelques points rigolos repérés
 Au click sur les points, nous allons zoomer pour que l'utilisateur voit instantanément le point d'interêt au bon niveau de zoom.
 
 1. Autorisez l'affichage d'un callout au MKMarkerAnnotationView que vous renvoyez (canShowCallout = true)
-2. Ajouter un rightCalloutAccessoryView à votre AnnotationView qui serait un bouton avec une icône de loupe par exemple [LIEN VERS FICHIER]. Note : pensez à régler la frame du bouton sinon il aura une taille de zéro par défaut
+2. Ajouter un rightCalloutAccessoryView à votre AnnotationView qui serait un bouton avec [une icône de loupe](/ressources/Zoom.jpg) par exemple. Note : pensez à régler la frame du bouton sinon il aura une taille de zéro par défaut
 3. Implémentez la fonction mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) pour être prévenu quand l'utilisateur clique sur votre bouton
 4. Au click sur le callout, changez la région visible en centrant sur l'annotation avec le bon niveau de zoom (voir MKCoordinateRegion et mapView.setRegion)
 

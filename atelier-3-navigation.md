@@ -33,7 +33,7 @@ Nous allons créer une navigation classique à base de 'Push'
 Nous allons maintenant afficher les données que l'on a parsé dans l'atelier précédent.
 
 1. Ajoutez une variable image à la classe Movie et renvoyez une image constuite à partir de la variable poster_path : utilisation de UIImage(named:) et dropFirst pour ne pas garder le / du poster_path
-Note : vous pouvez récuperez certaines images dans ce fichier .zip (LIEN)
+Note : vous pouvez récuperez certaines images dans ce fichier .zip : [MovieImage.zip](/ressources/MovieImage.zip)
 2. Créez une classe MovieCell qui dérive de UITableViewCell avec les outlets pour l'image et le titre
 2. Créez un écran de détail de film avec les bons outlets (vous pouvez reprendre l'écran du premier atelier)
 3. Au click sur la cellule passez les informations du film à l'écran de détail : utilisation de instantiateViewController pour créer l'écran et  tableView:didSelectRowAtIndexPath: pour réagir au click
