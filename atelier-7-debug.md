@@ -20,6 +20,8 @@ Vous allez utiliser les différents outils fournis par Xcode pour pouvoir étudi
 **Notions nécessaires :** debug, breakpoint, outlet, UIViewController life cycle, application life cycle,
 delegate, optional, utilisation mémoire, retention cycle, threading, main thread
 
+Clonez ce repository qui contient l'application à debugger : [https://github.com/Formation-iOS/Atelier7_Debug](https://github.com/Formation-iOS/Atelier7_Debug).
+
 ## Crash numéro 1
 
 Lancez l'application. Premier crash !

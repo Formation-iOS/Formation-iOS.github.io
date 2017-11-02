@@ -21,6 +21,8 @@ Pour cela, vous allez :
 
 **Notions nécessaires :** Formulaire, UITextField, gestion du clavier, Keychain, UserDefaults, authentification, feedback utilisateur et indicateur d'activité, gestion d'erreurs avec UIAlertController
 
+Reprenez le projet Xcode de l'atelier 5, où vous aviez affiché une liste de films et une vue de détail en utilisant l'API de themoviedb.org, ou clonez ce repository qui contient la solution de l'atelier 5 : [https://github.com/Formation-iOS/Atelier5_Networking](https://github.com/Formation-iOS/Atelier5_Networking).
+
 ## 1er exercice : création d'un formulaire de connexion
 
 Ce 1er exercice consiste à réaliser la partie interface graphique uniquement. 
