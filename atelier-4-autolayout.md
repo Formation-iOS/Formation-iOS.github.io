@@ -152,16 +152,6 @@ override func viewDidLoad() {
 
 A vous de jouer, encore une fois, utilisez Auto Layout ! La cellule doit avoir une hauteur calculable. Elle contient l'image paysage, le titre, la note et la description du film. Spécifiez autant de contraintes que nécessaires entre ces éléments pour que la hauteur du tout puisse être calculée.  
 
-### Cinquième exercice : Auto Layout dans les UIStackView et UIScrollView
-
-Cet exercice est plus avancé. C'est un exercice en « bonus », au cas où vous avez eu le temps de réaliser les 4 exercices précédents.
-
-Il s'agit de re-implémenter la vue de détail précédente, mais en utilisant cette fois-ci une UIStackView dans une UIScrollView, contenues dans un UIViewController basique.
-
-[Documentation d'Apple : UIStackView](https://developer.apple.com/documentation/uikit/uistackview)
-
-[Une réponse sur Stackoverflow qui pourra vous aider](https://stackoverflow.com/questions/31668970/is-it-possible-for-uistackview-to-scroll/35136217#35136217)
-
 ## Pour aller plus loin
 
 Les points suivants ne sont pas abordés dans ce cours, car ils sont trop avancés. Néanmoins, il est bon de savoir qu'ils existent, pour y avoir recours au cas où les méthodes moins avancées sont trop limitantes.
