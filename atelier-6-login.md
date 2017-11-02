@@ -32,14 +32,18 @@ L'intérêt d'utiliser un UITableViewController est qu'il va s'occuper de la ges
 ![](/assets/login.png)
 
 Lorsque le champ texte de l'identifiant est sélectionné, le clavier doit comporter un bouton « Next », comme dans la capture d'écran ci-dessous.
+Lorsque l'utilisateur clique sur le bouton « Next », le champ du mot de passe obtient le focus.
 Si l'utilisateur « scroll » vers le bas, les différents éléments de l'écran doivent s'afficher correctement, en particulier le bouton « Connexion ».
 
 ![](/assets/login-next.png)
 
 Lorsque le champ texte du mot de passe est sélectionné, le clavier doit comporter un bouton « Done ».
+Lorsque l'utilisateur clique sur le bouton « Done », la validation de l'identifiant et du mot de passe est réalisée via un appel à l'API de themoviedb.org.
 Le champ texte du mot de passe doit cacher le mot de passe, comme dans la capture d'écran ci-dessous.
 
 ![](/assets/login-done.png)
+
+Indication : vous allez avoir besoin des méthodes becomeFirstResponder et resignFirstResponder du UITextField, ainsi que de son delegate.
 
 Validez que tout fonctionne correctement en lançant l'application dans le simulateur de l'iPhone SE.
 
