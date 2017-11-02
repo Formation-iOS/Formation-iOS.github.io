@@ -13,7 +13,7 @@ Cela nous permettra de découvrir XCode, l'organisation d'un projet et le très 
 1. Créer un projet "Single view"
 2. Récupérez une image de film et ajoutez la au projet
 3. Reproduisez l'interface suivante (une image et deux label) :
-![](/assets/Bond_UI_1.png)
+![](/assets/Bond_UI_1.png =250x)
 
 ## Exercice 2- Interactif
 
