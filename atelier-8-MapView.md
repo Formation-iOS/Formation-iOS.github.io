@@ -43,5 +43,6 @@ Quand l'utilisateur a zoomé sur un point il est fastidieux de revenir à la vue
 2. À l'affichage de l'écran centrez la carte sur le point (0,0) et mettez le niveau de zoom à 160 en lattitude, 180 en longitude
 3. Branchez le bouton Unzoom sur une action qui centre la carte sur le point initial
 4. Cachez le bouton quand le niveau de zoom est inférieur au zoom initial. Pour savoir quand le niveau de zoom change, implémentez la fonction  `mapView(_ mapView: MKMapView, regionDidChangeAnimated animated: Bool)`
+
 ![](/assets/MapView_Unzoom.png)
 

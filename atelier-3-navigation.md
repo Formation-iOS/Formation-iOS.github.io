@@ -37,6 +37,7 @@ Note : vous pouvez récuperez certaines images dans ce fichier .zip : [MovieImag
 2. Créez une classe MovieCell qui dérive de `UITableViewCell` avec les outlets pour l'image et le titre
 2. Créez un écran de détail de film avec les bons outlets (vous pouvez reprendre l'écran du premier atelier)
 3. Au click sur la cellule passez les informations du film à l'écran de détail : utilisation de `instantiateViewController:` de `self.storyboard` pour créer l'écran et  `tableView:didSelectRowAtIndexPath:` pour réagir au click
+
 ![](/assets/Navigation_ListeDynamique.png)
 
 
