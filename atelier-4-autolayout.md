@@ -116,7 +116,8 @@ Cet affichage doit fonctionner quelques soient le device et l'orientation. Teste
 ### Troisième exercice : Auto Layout dans les UITableView
 
 Dans cet exercice, vous allez devoir afficher une liste de films.
-Pour l'instant, la liste va contenir des données « en dur » dans votre code.
+
+Reprenez le projet Xcode de l'atelier 3, où vous aviez affiché une liste de films et une vue de détail, ou clonez ce repository qui contient la solution de l'atelier 3 : [https://github.com/Formation-iOS/Atelier3_Navigation](https://github.com/Formation-iOS/Atelier3_Navigation)
 
 Voici à quoi doit ressembler l'affichage de la liste des films. Notez que le titre des films peut prendre plusieurs lignes, par exercice « Guardians of the Galaxy Vol. 2 ». Dans ce cas le texte de la description prendra moins de place.
 
