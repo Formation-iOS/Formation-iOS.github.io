@@ -47,13 +47,15 @@ Validez que tout fonctionne correctement en lançant l'application dans le simul
 
 ### Rappel sur les closures
 
-Vous allez implémenter une fonction "login", que vous appellerez dans votre view controller :
+Vous allez implémenter une fonction "login" :
 
 ```swift
 static func login(username: String, password: String, result: @escaping (Error?) -> Void) {
     ...
 }
 ```
+
+Vous appellerez ensuite cette fonction "login" dans votre view controller.
 
 Note : cette fonction login prend en paramètre une closure, appellée « result ».
 Si vous utilisez l'auto-complétion dans Xcode, celui-ci génèrera le code ci-dessous pour appeller cette fonction login.
