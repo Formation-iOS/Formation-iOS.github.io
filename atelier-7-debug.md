@@ -45,7 +45,7 @@ Mais à présent un crash se produit juste après.
 
 ## Le tab « Watchlist » ne se met pas à jour
 
-Le tab qui affiche la « Watchlist » ne se met pas à jour quand vous ajoutez un film à la « Watchlist ».
+S'il a déjà été affiché une fois le tab qui affiche la « Watchlist » ne se met pas à jour quand vous ajoutez un film à la « Watchlist ».
 Indication : utilisez le [NotificationCenter](https://developer.apple.com/documentation/foundation/nsnotificationcenter).
 
 ## La vue de détail d'un film ne s'affiche pas correctement
