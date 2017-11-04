@@ -1,0 +1,481 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Atelier 5 - Networking avec Alamofire · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="atelier-6-login.html" />
+    
+    
+    <link rel="prev" href="atelier-4-autolayout.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="atelier-1-xcode-et-interface-builder.html">
+            
+                <a href="atelier-1-xcode-et-interface-builder.html">
+            
+                    
+                    Atelier 1 - Xcode et Interface Builder
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="atelier-2-parsing-de-donnees.html">
+            
+                <a href="atelier-2-parsing-de-donnees.html">
+            
+                    
+                    Atelier 2 - Parsing de données
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="atelier-3-navigation.html">
+            
+                <a href="atelier-3-navigation.html">
+            
+                    
+                    Atelier 3 - Navigation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="atelier-4-autolayout.html">
+            
+                <a href="atelier-4-autolayout.html">
+            
+                    
+                    Atelier 4 - Auto Layout
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.6" data-path="atelier-5-networking.html">
+            
+                <a href="atelier-5-networking.html">
+            
+                    
+                    Atelier 5 - Networking avec Alamofire
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="atelier-6-login.html">
+            
+                <a href="atelier-6-login.html">
+            
+                    
+                    Atelier 6 - Connexion et compte utilisateur
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="atelier-7-debug.html">
+            
+                <a href="atelier-7-debug.html">
+            
+                    
+                    Atelier 7 - Debug et amélioration du code
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="atelier-8-MapView.html">
+            
+                <a href="atelier-8-MapView.html">
+            
+                    
+                    Atelier 8 - Affichage de données sur une carte
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="atelier-9-GeolocalistionEtNotifications.html">
+            
+                <a href="atelier-9-GeolocalistionEtNotifications.html">
+            
+                    
+                    Atelier 9 - Géolocalisation et notifications
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >Atelier 5 - Networking avec Alamofire</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="networking">Networking</h1>
+<h2 id="introduction">Introduction</h2>
+<p>En g&#xE9;n&#xE9;ral, les applications n&apos;ont pas toutes les donn&#xE9;es dont elles ont besoin en local. Elles appellent des services via le r&#xE9;seau pour r&#xE9;cup&#xE9;rer des donn&#xE9;es, des images etc...</p>
+<p>Dans l&apos;exemple de l&apos;application catalogue de films, vous allez connecter l&apos;app &#xE0; l&apos;API de <a href="https://www.themoviedb.org/" target="_blank">themoviedb.org</a>. Voici sa documentation : <a href="https://www.themoviedb.org/documentation/api" target="_blank">https://www.themoviedb.org/documentation/api</a>.</p>
+<p>Pour simplifier le code qui effectue les requ&#xEA;tes vers cette API, nous allons utiliser un &#xAB; pod &#xBB;, Alamofire : <a href="https://github.com/Alamofire/Alamofire" target="_blank">https://github.com/Alamofire/Alamofire</a></p>
+<p>Un &#xAB; pod &#xBB; est une biblioth&#xE8;que (&#xAB; library &#xBB;), une brique logicielle, pour les projets Swift et Objective-C.
+Le syst&#xE8;me de gestion de d&#xE9;pendances qui g&#xE8;re les &#xAB; pods &#xBB; s&apos;appelle &#xAB; Cocoapods &#xBB; : <a href="https://cocoapods.org/" target="_blank">https://cocoapods.org/</a>.</p>
+<p><strong>Notions n&#xE9;cessaires :</strong> Pods et cocoapods, networking avec Alamofire, Swift closures</p>
+<p>Reprenez le projet Xcode de l&apos;atelier 4, o&#xF9; vous aviez affich&#xE9; une liste de films et une vue de d&#xE9;tail avec Auto Layout, ou clonez ce repository qui contient la solution de l&apos;atelier 4 : <a href="https://github.com/Formation-iOS/Atelier4_AutoLayout_Films" target="_blank">https://github.com/Formation-iOS/Atelier4_AutoLayout_Films</a>.</p>
+<h2 id="cocoapods">Cocoapods</h2>
+<p>Tout d&apos;abord, il faut installer Cocoapods sur votre machine. Cocoapods est un outil Ruby, et Ruby est d&#xE9;j&#xE0; disponible sur macOS.</p>
+<p>Ouvrez un terminal, et entrez la ligne de commande suivante :</p>
+<pre><code class="lang-bash">$ sudo gem install cocoapods
+</code></pre>
+<p>Ensuite, dans le r&#xE9;pertoire qui contient votre projet Xcode, au m&#xEA;me niveau que le r&#xE9;pertoire .xcodeproj, ajoutez un fichier appell&#xE9; Podfile. Ce fichier d&#xE9;crit les d&#xE9;pendances (&#xAB; pods &#xBB;) de votre projet.
+Ici on va utiliser le pod de Networking &#xAB; Alamofire &#xBB;.</p>
+<p>Il est conseill&#xE9; d&apos;utiliser des versions exactes des pods (exemple : 4.5.1), pour que le build de votre application soit reproductible.</p>
+<pre><code class="lang-ruby">platform <span class="hljs-symbol">:ios</span>, <span class="hljs-string">&apos;10.0&apos;</span>
+use_frameworks!
+
+target <span class="hljs-string">&apos;MyApp&apos;</span> <span class="hljs-keyword">do</span>
+  pod <span class="hljs-string">&apos;Alamofire&apos;</span>, <span class="hljs-string">&apos;4.5.1&apos;</span>
+<span class="hljs-keyword">end</span>
+</code></pre>
+<p>Dans le fichier Podfile, remplacez &apos;MyApp&apos; par le nom de la target de build de votre application.</p>
+<p>Pour voir le nom de votre target de build, s&#xE9;lectionnez le projet tout en haut de l&apos;explorateur de projet (partie gauche d&apos;Xcode), puis cliquez sur le bouton entour&#xE9; en rouge ci-dessous.</p>
+<p><img src="assets/target.png" alt=""></p>
+<p>Ensuite, lancez la commande qui va installer les pods :</p>
+<pre><code class="lang-bash">$ pod install
+Analyzing dependencies
+Downloading dependencies
+Installing Alamofire (4.5.1)
+Generating Pods project
+Integrating client project
+
+[!] Please close any current Xcode sessions and use `Films.xcworkspace` <span class="hljs-keyword">for</span> this project from now on.
+Sending stats
+Pod installation complete! There is 1 dependency from the Podfile and 1 total pod installed.
+</code></pre>
+<p><strong>Attention au message Cocoapods : &#xAB; [!] Please close any current Xcode sessions and use <code>Films.xcworkspace</code> for this project from now on &#xBB;.</strong></p>
+<p>Quittez Xcode, et &#xE0; partir de maintenant ouvrez toujours le .xcworkspace dans Xcode, et plus le .xcodeproj. Xcode ne saura pas o&#xF9; trouver les pods dont d&#xE9;pend votre app si vous continuez &#xE0; utiliser le .xcodeproj.</p>
+<p><img src="assets/workspace-cocoapods.png" alt=""></p>
+<p>Vous pouvez ouvrir le nouveau .xcworkspace dans Xcode depuis Finder, ou en ligne de commande depuis le Terminal :</p>
+<pre><code class="lang-bash">$ open App.xcworkspace
+</code></pre>
+<p>Vous devriez voir un &#xE9;l&#xE9;ment appell&#xE9; &#xAB; Pods &#xBB; qui appara&#xEE;t dans l&apos;explorateur du projet dans la partie gauche d&apos;Xcode, comme dans l&apos;image ci-dessous.</p>
+<p><img src="assets/pods.png" alt=""></p>
+<p>Pour utiliser Alamofire dans votre code, il faut l&apos;importer dans un fichier .swift de la mani&#xE8;re suivante :</p>
+<pre><code class="lang-swift"><span class="hljs-keyword">import</span> Alamofire
+</code></pre>
+<h2 id="networking-avec-alamofire">Networking avec Alamofire</h2>
+<p>Jusqu&apos;&#xE0; pr&#xE9;sent, l&apos;application de films n&apos;a utilis&#xE9; que des donn&#xE9;es en local, mais il serait plus int&#xE9;ressant d&apos;acc&#xE9;der &#xE0; une vraie base de donn&#xE9;es de films.
+Vous allez utiliser celle fournie par <a href="https://www.themoviedb.org/" target="_blank">themoviedb.org</a>.</p>
+<h3 id="1&#xE8;re-partie--liste-de-films-sans-images">1&#xE8;re partie : liste de films sans images</h3>
+<p>Voici l&apos;URL de requ&#xEA;te GET &#xE0; utiliser pour obtenir la liste des meilleurs films via l&apos;API de themoviedb.org :</p>
+<pre><code>https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&amp;api_key=b692eafd258dae823a2d9ed21dbcdeb5
+</code></pre><pre><code class="lang-json">{
+    <span class="hljs-string">&quot;page&quot;</span>: <span class="hljs-number">1</span>,
+    <span class="hljs-string">&quot;results&quot;</span>: [
+        {
+            <span class="hljs-string">&quot;adult&quot;</span>: <span class="hljs-literal">false</span>,
+            <span class="hljs-string">&quot;backdrop_path&quot;</span>: <span class="hljs-string">&quot;/tcheoA2nPATCm2vvXw2hVQoaEFD.jpg&quot;</span>,
+            <span class="hljs-string">&quot;genre_ids&quot;</span>: [
+                <span class="hljs-number">12</span>,
+                <span class="hljs-number">18</span>,
+                <span class="hljs-number">27</span>
+            ],
+            <span class="hljs-string">&quot;id&quot;</span>: <span class="hljs-number">346364</span>,
+            <span class="hljs-string">&quot;original_language&quot;</span>: <span class="hljs-string">&quot;en&quot;</span>,
+            <span class="hljs-string">&quot;original_title&quot;</span>: <span class="hljs-string">&quot;It&quot;</span>,
+            <span class="hljs-string">&quot;overview&quot;</span>: <span class="hljs-string">&quot;In a small town in Maine, seven children known as The Losers Club come face to face with life problems, bullies and a monster that takes the shape of a clown called Pennywise.&quot;</span>,
+            <span class="hljs-string">&quot;popularity&quot;</span>: <span class="hljs-number">745.88068</span>,
+            <span class="hljs-string">&quot;poster_path&quot;</span>: <span class="hljs-string">&quot;/9E2y5Q7WlCVNEhP5GiVTjhEhx1o.jpg&quot;</span>,
+            <span class="hljs-string">&quot;release_date&quot;</span>: <span class="hljs-string">&quot;2017-09-05&quot;</span>,
+            <span class="hljs-string">&quot;title&quot;</span>: <span class="hljs-string">&quot;It&quot;</span>,
+            <span class="hljs-string">&quot;video&quot;</span>: <span class="hljs-literal">false</span>,
+            <span class="hljs-string">&quot;vote_average&quot;</span>: <span class="hljs-number">7.4</span>,
+            <span class="hljs-string">&quot;vote_count&quot;</span>: <span class="hljs-number">2039</span>
+        },
+        {
+            <span class="hljs-string">&quot;adult&quot;</span>: <span class="hljs-literal">false</span>,
+            <span class="hljs-string">&quot;backdrop_path&quot;</span>: <span class="hljs-string">&quot;/uX7LXnsC7bZJZjn048UCOwkPXWJ.jpg&quot;</span>,
+            <span class="hljs-string">&quot;genre_ids&quot;</span>: [
+                <span class="hljs-number">10751</span>,
+                <span class="hljs-number">16</span>,
+                <span class="hljs-number">12</span>,
+                <span class="hljs-number">35</span>
+            ],
+            <span class="hljs-string">&quot;id&quot;</span>: <span class="hljs-number">211672</span>,
+            <span class="hljs-string">&quot;original_language&quot;</span>: <span class="hljs-string">&quot;en&quot;</span>,
+            <span class="hljs-string">&quot;original_title&quot;</span>: <span class="hljs-string">&quot;Minions&quot;</span>,
+            <span class="hljs-string">&quot;overview&quot;</span>: <span class="hljs-string">&quot;Minions Stuart, Kevin and Bob are recruited by Scarlet Overkill, a super-villain who, alongside her inventor husband Herb, hatches a plot to take over the world.&quot;</span>,
+            <span class="hljs-string">&quot;popularity&quot;</span>: <span class="hljs-number">534.295684</span>,
+            <span class="hljs-string">&quot;poster_path&quot;</span>: <span class="hljs-string">&quot;/q0R4crx2SehcEEQEkYObktdeFy.jpg&quot;</span>,
+            <span class="hljs-string">&quot;release_date&quot;</span>: <span class="hljs-string">&quot;2015-06-17&quot;</span>,
+            <span class="hljs-string">&quot;title&quot;</span>: <span class="hljs-string">&quot;Minions&quot;</span>,
+            <span class="hljs-string">&quot;video&quot;</span>: <span class="hljs-literal">false</span>,
+            <span class="hljs-string">&quot;vote_average&quot;</span>: <span class="hljs-number">6.4</span>,
+            <span class="hljs-string">&quot;vote_count&quot;</span>: <span class="hljs-number">4733</span>
+        },
+        ..........
+    ],
+    <span class="hljs-string">&quot;total_pages&quot;</span>: <span class="hljs-number">16412</span>,
+    <span class="hljs-string">&quot;total_results&quot;</span>: <span class="hljs-number">328222</span>
+}
+</code></pre>
+<p>R&#xE9;utilisez le code que vous avez utilis&#xE9; pour le parsing de donn&#xE9;es provenant de fichiers .json.
+Remplacez ce code par un appel &#xE0; l&apos;API, en utilisant Alamofire, ainsi que les Codable et JSONDecoder vus pr&#xE9;c&#xE9;demment.</p>
+<p>Exemple de requ&#xEA;te GET avec Alamofire :</p>
+<pre><code class="lang-swift"><span class="hljs-type">Alamofire</span>.request(<span class="hljs-string">&quot;https://httpbin.org/get&quot;</span>).responseJSON { response <span class="hljs-keyword">in</span>
+    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;Request: <span class="hljs-subst">\(String(describing: response.request)</span>)&quot;</span>)   <span class="hljs-comment">// original url request</span>
+    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;Response: <span class="hljs-subst">\(String(describing: response.response)</span>)&quot;</span>) <span class="hljs-comment">// http url response</span>
+    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;Result: <span class="hljs-subst">\(response.result)</span>&quot;</span>)                         <span class="hljs-comment">// response serialization result</span>
+}
+</code></pre>
+<p>Alamofire utilise les closures Swift. Une closure Swift est un bloc de code &#xAB; ind&#xE9;pendant &#xBB;.
+Par exemple, on peut le passer en param&#xE8;tre &#xE0; des fonctions, dans le but de l&apos;appeller dans l&apos;impl&#xE9;mentation de la fonction. C&apos;est alors une sorte de &#xAB; callback &#xBB;.
+Une closure peut capturer des variables du contexte dans lequel elle est d&#xE9;fini. Cette notion de capture s&apos;appelle &#xAB; closing over &#xBB;, d&apos;o&#xF9; le terme &#xAB; closure &#xBB;.
+Dans l&apos;exemple pr&#xE9;c&#xE9;dent, cette partie est une closure :</p>
+<pre><code class="lang-swift">{ response <span class="hljs-keyword">in</span>
+    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;Request: <span class="hljs-subst">\(String(describing: response.request)</span>)&quot;</span>)   <span class="hljs-comment">// original url request</span>
+    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;Response: <span class="hljs-subst">\(String(describing: response.response)</span>)&quot;</span>) <span class="hljs-comment">// http url response</span>
+    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;Result: <span class="hljs-subst">\(response.result)</span>&quot;</span>)                         <span class="hljs-comment">// response serialization result</span>
+}
+</code></pre>
+<p>Il s&apos;agit du bloc de code qui sera appell&#xE9; par la m&#xE9;thode &#xAB; responseJSON &#xBB; quand la r&#xE9;ponse &#xE0; la requ&#xEA;te sera arriv&#xE9;e. Notez que dans ce cas, cet appel &#xE0; la closure ce fera de mani&#xE8;re asynchrone.</p>
+<h3 id="2&#xE8;me-partie--affichage-des-images-via-le-pod-alamofireimage">2&#xE8;me partie : affichage des images via le pod AlamofireImage</h3>
+<p>Voici un exemple d&apos;URL d&apos;image de films fournies par themoviedb.org : <a href="https://image.tmdb.org/t/p/w500/q0R4crx2SehcEEQEkYObktdeFy.jpg" target="_blank">https://image.tmdb.org/t/p/w500/q0R4crx2SehcEEQEkYObktdeFy.jpg</a></p>
+<p>Cette URL est compos&#xE9;e d&apos;une partie fixe, <a href="https://image.tmdb.org/t/p/w500" target="_blank">https://image.tmdb.org/t/p/w500</a>, &#xE0; laquelle est ajout&#xE9;e le nom d&apos;un fichier .jpg d&apos;image.
+Ce nom est fourni dans le json de la liste des films (poster_path et backdrop_path).</p>
+<p>Utilisez le pod AlamofireImage pour afficher les images des posters dans la liste des films, puis l&apos;image backdrop dans l&apos;&#xE9;cran de d&#xE9;tail d&apos;un film.</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="atelier-4-autolayout.html" class="navigation navigation-prev " aria-label="Previous page: Atelier 4 - Auto Layout">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="atelier-6-login.html" class="navigation navigation-next " aria-label="Next page: Atelier 6 - Connexion et compte utilisateur">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Atelier 5 - Networking avec Alamofire","level":"1.6","depth":1,"next":{"title":"Atelier 6 - Connexion et compte utilisateur","level":"1.7","depth":1,"path":"atelier-6-login.md","ref":"atelier-6-login.md","articles":[]},"previous":{"title":"Atelier 4 - Auto Layout","level":"1.5","depth":1,"path":"atelier-4-autolayout.md","ref":"atelier-4-autolayout.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"atelier-5-networking.md","mtime":"2017-11-04T17:28:05.248Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2017-11-04T16:43:55.415Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
