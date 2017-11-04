@@ -13,6 +13,8 @@ Le système de gestion de dépendances qui gère les « pods » s'appelle « Coc
 
 **Notions nécessaires :** Pods et cocoapods, networking avec Alamofire, Swift closures
 
+Reprenez le projet Xcode de l'atelier 4, où vous aviez affiché une liste de films et une vue de détail avec Auto Layout, ou clonez ce repository qui contient la solution de l'atelier 4 : [https://github.com/Formation-iOS/Atelier4_AutoLayout_Films](https://github.com/Formation-iOS/Atelier4_AutoLayout_Films).
+
 ## Cocoapods
 
 Tout d'abord, il faut installer Cocoapods sur votre machine. Cocoapods est un outil Ruby, et Ruby est déjà disponible sur macOS.

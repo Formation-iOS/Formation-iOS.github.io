@@ -21,6 +21,8 @@ Pour cela, vous allez :
 
 **Notions nécessaires :** Formulaire, UITextField, gestion du clavier, Keychain, UserDefaults, authentification, feedback utilisateur et indicateur d'activité, gestion d'erreurs avec UIAlertController
 
+Reprenez le projet Xcode de l'atelier 5, où vous aviez affiché une liste de films et une vue de détail en utilisant l'API de themoviedb.org, ou clonez ce repository qui contient la solution de l'atelier 5 : [https://github.com/Formation-iOS/Atelier5_Networking](https://github.com/Formation-iOS/Atelier5_Networking).
+
 ## 1er exercice : création d'un formulaire de connexion
 
 Ce 1er exercice consiste à réaliser la partie interface graphique uniquement. 
@@ -32,14 +34,18 @@ L'intérêt d'utiliser un UITableViewController est qu'il va s'occuper de la ges
 ![](/assets/login.png)
 
 Lorsque le champ texte de l'identifiant est sélectionné, le clavier doit comporter un bouton « Next », comme dans la capture d'écran ci-dessous.
+Lorsque l'utilisateur clique sur le bouton « Next », le champ du mot de passe obtient le focus.
 Si l'utilisateur « scroll » vers le bas, les différents éléments de l'écran doivent s'afficher correctement, en particulier le bouton « Connexion ».
 
 ![](/assets/login-next.png)
 
 Lorsque le champ texte du mot de passe est sélectionné, le clavier doit comporter un bouton « Done ».
+Lorsque l'utilisateur clique sur le bouton « Done », la validation de l'identifiant et du mot de passe est réalisée via un appel à l'API de themoviedb.org.
 Le champ texte du mot de passe doit cacher le mot de passe, comme dans la capture d'écran ci-dessous.
 
 ![](/assets/login-done.png)
+
+Indication : vous allez avoir besoin des méthodes becomeFirstResponder et resignFirstResponder du UITextField, ainsi que de son delegate.
 
 Validez que tout fonctionne correctement en lançant l'application dans le simulateur de l'iPhone SE.
 
@@ -47,13 +53,15 @@ Validez que tout fonctionne correctement en lançant l'application dans le simul
 
 ### Rappel sur les closures
 
-Vous allez implémenter une fonction "login", que vous appellerez dans votre view controller :
+Vous allez implémenter une fonction "login" :
 
 ```swift
 static func login(username: String, password: String, result: @escaping (Error?) -> Void) {
     ...
 }
 ```
+
+Vous appellerez ensuite cette fonction "login" dans votre view controller.
 
 Note : cette fonction login prend en paramètre une closure, appellée « result ».
 Si vous utilisez l'auto-complétion dans Xcode, celui-ci génèrera le code ci-dessous pour appeller cette fonction login.

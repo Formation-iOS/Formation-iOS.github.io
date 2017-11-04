@@ -20,6 +20,8 @@ Vous allez utiliser les différents outils fournis par Xcode pour pouvoir étudi
 **Notions nécessaires :** debug, breakpoint, outlet, UIViewController life cycle, application life cycle,
 delegate, optional, utilisation mémoire, retention cycle, threading, main thread
 
+Clonez ce repository qui contient l'application à debugger : [https://github.com/Formation-iOS/Atelier7_Debug](https://github.com/Formation-iOS/Atelier7_Debug).
+
 ## Crash numéro 1
 
 Lancez l'application. Premier crash !
@@ -52,14 +54,9 @@ Indication : utilisez le [NotificationCenter](https://developer.apple.com/docume
 
 Une partie de la vue de détail d'un film ne s'affiche pas correctement : la description du film est coupée.
 
-## La liste des « Popular Movies » ne se met pas à jour quand on revient dans l'app
+## Les cellules des films n'affichent pas correctement les notes moyennes en rouge
 
-La liste des « Popular Movies » ne se met pas à jour quand on appuye sur le bouton « home » de l'iPhone, puis qu'on revient dans l'app.
-
-## Les cellules des films n'ont pas toujours la bonne image
-
-Supprimez l'application. Relancez la avec Xcode, et scrollez rapidement dans la liste des « Popular Movies ».
-Vous allez remarquer que certaines cellules peuvent afficher une image qui ne correspond pas à la description.
+Dans la liste des films, la note d'un film devrait s'afficher en rouge si la note est plus grande que 8. Mais ce n'est pas le cas.
 
 ## Un problème de mémoire
 
