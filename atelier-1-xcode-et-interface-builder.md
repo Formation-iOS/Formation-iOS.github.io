@@ -23,12 +23,5 @@ Le but ici va être d'ajouter un bouton qui permet de changer de film en changen
 1. Ajoutez un bouton à l'interface
 2. Ajoutez une action `buttonClicked` à ce bouton (IBAction)
 3. Créez un lien entre l'image, le titre et le code de ViewController (IBOutlet)
-4. Dans le code de l'action, changez l'image et le titre affichés à l'écran : `imageView.image =` et  `titleLabel.text = `
-
-## Exercice bonus
-
-Le layout qu'on a crée ne s'adapte pas bien aux différentes tailles de téléphone. Faisons-le de la manière la plus basique avec l'auto-resizing.
-
-1. Testez l'interface sur les différentes tailles d'écran
-2. Ajustez les masques d'autoresizing pour avoir une interface qui s'adapte bien
+4. Dans le code de l'action, changez l'image et le titre affichés à l'écran : `imageView.image = UIImage(named:"NOM")` et  `titleLabel.text = `
 
