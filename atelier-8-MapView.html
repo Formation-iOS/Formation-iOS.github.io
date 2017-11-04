@@ -1,0 +1,387 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Atelier 8 - Affichage de données sur une carte · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="atelier-9-GeolocalistionEtNotifications.html" />
+    
+    
+    <link rel="prev" href="atelier-7-debug.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="atelier-1-xcode-et-interface-builder.html">
+            
+                <a href="atelier-1-xcode-et-interface-builder.html">
+            
+                    
+                    Atelier 1 - Xcode et Interface Builder
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="atelier-2-parsing-de-donnees.html">
+            
+                <a href="atelier-2-parsing-de-donnees.html">
+            
+                    
+                    Atelier 2 - Parsing de données
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="atelier-3-navigation.html">
+            
+                <a href="atelier-3-navigation.html">
+            
+                    
+                    Atelier 3 - Navigation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="atelier-4-autolayout.html">
+            
+                <a href="atelier-4-autolayout.html">
+            
+                    
+                    Atelier 4 - Auto Layout
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="atelier-5-networking.html">
+            
+                <a href="atelier-5-networking.html">
+            
+                    
+                    Atelier 5 - Networking avec Alamofire
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="atelier-6-login.html">
+            
+                <a href="atelier-6-login.html">
+            
+                    
+                    Atelier 6 - Connexion et compte utilisateur
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="atelier-7-debug.html">
+            
+                <a href="atelier-7-debug.html">
+            
+                    
+                    Atelier 7 - Debug et amélioration du code
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.9" data-path="atelier-8-MapView.html">
+            
+                <a href="atelier-8-MapView.html">
+            
+                    
+                    Atelier 8 - Affichage de données sur une carte
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="atelier-9-GeolocalistionEtNotifications.html">
+            
+                <a href="atelier-9-GeolocalistionEtNotifications.html">
+            
+                    
+                    Atelier 9 - Géolocalisation et notifications
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >Atelier 8 - Affichage de données sur une carte</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="mapview">MapView</h1>
+<h2 id="introduction">Introduction</h2>
+<p>Dans cet atelier nous allons faire une application qui permet de voir des endroits marrants rep&#xE9;r&#xE9;s depuis Google Earth.</p>
+<p>Cela nous permettra de travailler sur les MapView, les annotations et les d&#xE9;placements sur la carte.</p>
+<p><strong>Notions n&#xE9;cessaires :</strong> fonctions importantes de <code>MKMapViewDelegate</code>, diff&#xE9;rences entre <code>MKAnnotation</code> et <code>MKAnnotationView</code>, <code>MKCoordinateRegion</code></p>
+<h2 id="exercice-1--premi&#xE8;re-carte-avec-des-points">Exercice 1- Premi&#xE8;re carte avec des points</h2>
+<p>Dans ce premi&#xE8;re exercice, nous allons placer quelques points rigolos rep&#xE9;r&#xE9;s sur Google Earth (donn&#xE9;es tir&#xE9;es de <a href="http://twistedsifter.com/2014/02/50-amazing-finds-on-google-earth/" target="_blank">http://twistedsifter.com/2014/02/50-amazing-finds-on-google-earth/</a>)</p>
+<p><img src="assets/MapView_MapOverview.png" alt=""></p>
+<ol>
+<li>Cr&#xE9;ez un nouveau projet Atelier8_MapView</li>
+<li>R&#xE9;cup&#xE9;rez le fichier <a href="ressources/AmazingPlaces.plist">AmazingPlaces.plist</a> et le fichier <a href="ressources/FunMapPoint.swift">FunMapPoint.swift</a> pour parser ce plist</li>
+<li>Ajoutez une vue MapView &#xE0; l&apos;&#xE9;cran principale et cr&#xE9;ez un outlet sur la MapView</li>
+<li>Cr&#xE9;ez une classe FunAnnotation. Cette classe doit :<pre><code> 1. avoir un initializer de type `required init(mapPoint: FunMapPoint)`
+ 2. impl&#xE9;menter le protocole `MKAnnotation` (et donc d&#xE9;river de `NSObject`)
+</code></pre></li>
+<li>Pour chaque point de votre liste, ajoutez une annotation &#xE0; la carte (<code>mapview.addAnnotation</code>)</li>
+<li>R&#xE9;glez ViewController comme le delegate de la MapView</li>
+<li>Impl&#xE9;mentez le protocole <code>MKMapViewDelegate</code>. Notamment la fonction <code>mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -&gt; MKAnnotationView?</code> qui doit renvoyer une <code>MKMarkerAnnotationView</code> correctement remplis</li>
+</ol>
+<h2 id="exercice-2--click-sur-les-points-dinter&#xEA;t">Exercice 2- Click sur les points d&apos;inter&#xEA;t</h2>
+<p>Au click sur les points, nous allons zoomer pour que l&apos;utilisateur voit instantan&#xE9;ment le point d&apos;inter&#xEA;t au bon niveau de zoom.</p>
+<ol>
+<li>Autorisez l&apos;affichage d&apos;un callout au <code>MKMarkerAnnotationView</code> que vous renvoyez (canShowCallout = true)</li>
+<li>Ajouter un <code>rightCalloutAccessoryView</code> &#xE0; votre AnnotationView qui serait un bouton avec <a href="ressources/Zoom.jpg">une ic&#xF4;ne de loupe</a> par exemple. Note : pensez &#xE0; r&#xE9;gler la frame du bouton sinon il aura une taille de z&#xE9;ro par d&#xE9;faut</li>
+<li>Impl&#xE9;mentez la fonction <code>mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl)</code> pour &#xEA;tre pr&#xE9;venu quand l&apos;utilisateur clique sur votre bouton</li>
+<li>Au click sur le callout, changez la r&#xE9;gion visible en centrant sur l&apos;annotation avec le bon niveau de zoom (voir <code>MKCoordinateRegion</code> et <code>mapView.setRegion</code>)</li>
+</ol>
+<p><img src="assets/MapView_Zoom.png" alt=""></p>
+<h2 id="exercice-bonus---bouton-dezoom">Exercice bonus - Bouton dezoom</h2>
+<p>Quand l&apos;utilisateur a zoom&#xE9; sur un point il est fastidieux de revenir &#xE0; la vue globale. Nous allons ajouter un bouton pour cela.</p>
+<ol>
+<li>Ajoutez un bouton &quot;unzoom&quot; &#xE0; votre interface</li>
+<li>&#xC0; l&apos;affichage de l&apos;&#xE9;cran centrez la carte sur le point (0,0) et mettez le niveau de zoom &#xE0; 160 en lattitude, 180 en longitude</li>
+<li>Branchez le bouton Unzoom sur une action qui centre la carte sur le point initial</li>
+<li>Cachez le bouton quand le niveau de zoom est inf&#xE9;rieur au zoom initial. Pour savoir quand le niveau de zoom change, impl&#xE9;mentez la fonction  <code>mapView(_ mapView: MKMapView, regionDidChangeAnimated animated: Bool)</code></li>
+</ol>
+<p><img src="assets/MapView_Unzoom.png" alt=""></p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="atelier-7-debug.html" class="navigation navigation-prev " aria-label="Previous page: Atelier 7 - Debug et amélioration du code">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="atelier-9-GeolocalistionEtNotifications.html" class="navigation navigation-next " aria-label="Next page: Atelier 9 - Géolocalisation et notifications">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Atelier 8 - Affichage de données sur une carte","level":"1.9","depth":1,"next":{"title":"Atelier 9 - Géolocalisation et notifications","level":"1.10","depth":1,"path":"atelier-9-GeolocalistionEtNotifications.md","ref":"atelier-9-GeolocalistionEtNotifications.md","articles":[]},"previous":{"title":"Atelier 7 - Debug et amélioration du code","level":"1.8","depth":1,"path":"atelier-7-debug.md","ref":"atelier-7-debug.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"atelier-8-MapView.md","mtime":"2017-11-02T16:21:20.330Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2017-11-04T16:43:55.415Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
