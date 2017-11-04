@@ -22,7 +22,7 @@ Dans un nouveau projet Xcode \(Single View Template\) créez une classe Movie av
 Le but va être de parser le fichier suivant : [BestMovie.json](/ressources/BestMovie.json)
 
 1. Ajoutez le fichier BestMovie.json à votre projet 
-2. Ajoutez le fichier [JSONHelper.swift](/ressources/JSONHelper.swift) \(c'est une extension pour récupérer facilement un tableau de dictionnaires à partir d'un fichier json local\)
+2. Ajoutez le fichier [JSONHelper.swift](/ressources/JSONHelper.swift) \(c'est une extension pour récupérer facilement un tableau de dictionnaires à partir d'un fichier json local en utilisant `JSONSerialization`\)
 3. Transformez le contenu du fichier en un tableau de dictionnaire
 4. Parcourez ces dictionnaires pour créer des objets de type Movie. Pour la date, utilisez un `DateFormatter`. Pour les autres valeurs, faites un cast.
 5. Ajoutez une fonction description à la classe movie et faites un print des objets récupérés
@@ -33,7 +33,7 @@ Le but va être de parser le fichier suivant : [BestMovie.json](/ressources/Best
 
 Le but de l'étape 2 était surtout de vous faire manipuler du Swift. En pratique, on fait rarement ce processus à la main. Depuis Swift 4 on peut utiliser le protocole `Codable` pour cela.
 
-1. Adaptez votre projet pour qu'il utilise le protocole Codable.
+1. Adaptez votre projet pour qu'il utilise le protocole `Codable` et `JSONDecoder`
 
 **Pour aller plus loin **: on est ici dans un cas simple mais le protocole semble suffisament puissant pour couvrir les cas plus complexes : [voir cet excellent tutorial de Ben Scheirman](http://benscheirman.com/2017/06/ultimate-guide-to-json-parsing-with-swift-4/)  pour plus d'infos.
 
