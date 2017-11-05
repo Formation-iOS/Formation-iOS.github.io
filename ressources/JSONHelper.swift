@@ -10,7 +10,7 @@ import Foundation
 
 typealias JSON = [String:Any]
 
-extension FileManager {
+class JSONHelper {
     
     static func jsonArray (fromJSONFile fileName:String) -> [JSON] {
         guard let filePath = Bundle.main.path(forResource: fileName, ofType: "json") else {

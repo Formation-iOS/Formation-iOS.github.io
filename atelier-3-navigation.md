@@ -32,13 +32,27 @@ Nous allons créer une navigation classique à base de 'Push'
 
 Nous allons maintenant afficher les données que l'on a parsé dans l'atelier précédent.
 
-1. Ajoutez une variable image à la classe Movie et renvoyez une image constuite à partir de la variable poster_path : utilisation de `UIImage(named:)` et `dropFirst()` pour ne pas garder le / du poster_path
-Note : vous pouvez récuperez certaines images dans ce fichier .zip : [MovieImage.zip](/ressources/MovieImage.zip)
-2. Créez une classe MovieCell qui dérive de `UITableViewCell` avec les outlets pour l'image et le titre
-2. Créez un écran de détail de film avec les bons outlets (vous pouvez reprendre l'écran du premier atelier)
-3. Au click sur la cellule passez les informations du film à l'écran de détail : utilisation de `instantiateViewController:` de `self.storyboard` pour créer l'écran et  `tableView:didSelectRowAtIndexPath:` pour réagir au click
+1. Dans le storyboard, déclarez votre tableView dynamique et ajoutez une cellule avec un label pour le titre et un label pour la note
+2. Créez une classe MovieCell qui dérive de `UITableViewCell`
+3. Dans le storyboard, déclarez que la cell est de type `MovieCell`et que son identifier est `MovieCellIndentifier`
+4. Créez les outlet entre le storyboard et `MovieCell` pour les labels
+5. Déclarez que votre ViewController implémente le protocole `UITableViewDataSource` et branchez le controlleur comme data source de votre tableView
+6. Implémentez la fonction `tableView:numberOfRowsInSection:`. Elle doit renvoyer le nombre d'élement dans le tableau de film
+7. Implémentez `tableView:cellForRowAt:` qui doit renvoyez une cellule pour chacun des films. Pour cela utilisez  `tableView.dequeueReusableCell(identifier:"")` pour récupérer une cellule avec le bon identifiant. Et castez cette cellule en `MovieCell`. Puis remplissez les label de titre et de rating avec les données du film correspondant à la ligne
 
+
+## Exercice 4 - Ouverture d'un écran de détail spécifique
+1. Implémentez le protocole UITableViewDelegate, notamment la fonction `tableView:didSelectRowAtIndexPath:` pour réagir au click.
+2. Dans cette fonction, il faut : a) créez un écran de type DetailViewController (`storyboard.instanciateViewController(identifier:"")`) puis b) le pusher dans le navigationController (`self.navigationController.push(viewController)`).
+
+## Exercice bonus : ajoutez une image dans la liste
+1. Ajoutez une variable image à la classe Movie et renvoyez une image constuite à partir de la variable poster_path : utilisation de `UIImage(named:)` et `dropFirst()` pour ne pas garder le / du poster_path
+2. Ajoutez une image dans les cellules de type MovieCell
+3. Remplissez l'image avec les bonnes données dans MovieCell et DetailViewController
+Note : vous pouvez récuperez certaines images dans ce fichier .zip : [MovieImage.zip](/ressources/MovieImage.zip)
 ![](/assets/Navigation_ListeDynamique.png)
+
+
 
 
 
