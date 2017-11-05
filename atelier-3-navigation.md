@@ -12,7 +12,7 @@ Cela nous permettra de travailler sur les transitions entre les écrans.
 
 1. Créer une TableView avec 4 cellules de film statiques de type Basic. Laissez le layout tel quel.
 2. Créez un écran basique avec un fond rouge par exemple
-3. Au click sur la cellule ouvrez cet écran en modal (`presentModally` dans le storyboard)
+3. Au click sur la cellule ouvrez cet écran en modal (`show` dans le storyboard)
 4. Créer une classe `DetailViewController`
 5. Connectez la vue rouge avec la classe `DetailViewController` (Custom class : `DetailViewController` dans le storyboard)
 6. Ajoutez un bouton fermer à la vue et créez une IBAction `closeButtonClicked:` dans le code de `DetailViewController`
@@ -26,7 +26,7 @@ Cela nous permettra de travailler sur les transitions entre les écrans.
 Nous allons créer une navigation classique à base de 'Push'
 
 1. Intégrez votre liste de film dans un `UINavigationController`
-2. Au click sur la cellule ouvrez l'écran rouge en mode push (option `Show`). Pour cela tirez des liens dans le storyboard.
+2. Au click sur la cellule, l'écran est maintenant affiché en mode push
 
 ## Exercice 3 - Données dynamiques
 
@@ -43,7 +43,7 @@ Nous allons maintenant afficher les données que l'on a parsé dans l'atelier pr
 
 ## Exercice 4 - Ouverture d'un écran de détail spécifique
 1. Implémentez le protocole UITableViewDelegate, notamment la fonction `tableView:didSelectRowAtIndexPath:` pour réagir au click.
-2. Dans cette fonction, il faut : a) créez un écran de type DetailViewController (`storyboard.instanciateViewController(identifier:"")`) puis b) le pusher dans le navigationController (`self.navigationController.push(viewController)`).
+2. Dans cette fonction, il faut : a) créez un écran de type DetailViewController (`storyboard.instanciateViewController(identifier:"")`), b) lui donner le bon movie (`detailViewController.movie =`) puis c) le pusher dans le navigationController (`self.navigationController.push(viewController)`).
 
 ## Exercice bonus : ajoutez une image dans la liste
 1. Ajoutez une variable image à la classe Movie et renvoyez une image constuite à partir de la variable poster_path : utilisation de `UIImage(named:)` et `dropFirst()` pour ne pas garder le / du poster_path
