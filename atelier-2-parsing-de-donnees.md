@@ -19,10 +19,10 @@ Dans un nouveau projet Xcode \(Single View Template\) créez une classe Movie av
 
 ## Exercice 2 - Parsing naïf
 
-Le but va être de parser le fichier suivant : [BestMovie.json](/ressources/BestMovie.json)
+Le but va être de parser le fichier suivant : [BestMovie.json](/tutorialFiles/BestMovie.json)
 
 1. Ajoutez le fichier BestMovie.json à votre projet 
-2. Ajoutez le fichier [JSONHelper.swift](/ressources/JSONHelper.swift) \(c'est une extension pour récupérer facilement un tableau de dictionnaires à partir d'un fichier json local en utilisant `JSONSerialization`\)
+2. Ajoutez le fichier [JSONHelper.swift](/tutorialFiles/JSONHelper.swift) \(c'est une extension pour récupérer facilement un tableau de dictionnaires à partir d'un fichier json local en utilisant `JSONSerialization`\)
 3. Transformez le contenu du fichier en un tableau de dictionnaire
 4. Parcourez ces dictionnaires pour créer des objets de type Movie. Pour la date, utilisez un `DateFormatter`. Pour les autres valeurs, faites un cast.
 5. Ajoutez une fonction description à la classe movie et faites un print des objets récupérés
