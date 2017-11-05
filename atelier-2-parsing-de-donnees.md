@@ -35,7 +35,7 @@ Le but de l'étape 2 était surtout de vous faire manipuler du Swift. En pratiqu
 
 1. Adaptez votre projet pour qu'il utilise le protocole `Codable` et `JSONDecoder`
 
-**Pour aller plus loin **: on est ici dans un cas simple mais le protocole semble suffisament puissant pour couvrir les cas plus complexes : [voir cet excellent tutorial de Ben Scheirman](http://benscheirman.com/2017/06/ultimate-guide-to-json-parsing-with-swift-4/)  pour plus d'infos.
+**Pour aller plus loin**: on est ici dans un cas simple mais le protocole semble suffisament puissant pour couvrir les cas plus complexes : [voir cet excellent tutorial de Ben Scheirman](http://benscheirman.com/2017/06/ultimate-guide-to-json-parsing-with-swift-4/)  pour plus d'infos.
 
 ## Exercice bonus - Affichage des données
 
@@ -43,5 +43,6 @@ Le but de l'étape 2 était surtout de vous faire manipuler du Swift. En pratiqu
 Note : ne vous inquiétez pas si le layout s'adapte mal aux tailles d'écrans
 2. Remplissez l'écran avec les données du premier film de votre tableau. Utilisez les outlets et changez les valeurs dans `viewDidLoad`. Utilisez le `DateFormater` pour afficher la date correctement.
 Note : laissez une image fixe pour l'instant
+3. Ajoutez un bouton next qui permet d'afficher le prochain film de la liste (en fin de liste revenez au premier élément)
 
 ![](/assets/Parsing_Bonus.png)
