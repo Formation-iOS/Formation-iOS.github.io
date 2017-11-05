@@ -1,0 +1,397 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Atelier 9 - Géolocalisation et notifications · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    
+    <link rel="prev" href="atelier-8-MapView.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="atelier-1-xcode-et-interface-builder.html">
+            
+                <a href="atelier-1-xcode-et-interface-builder.html">
+            
+                    
+                    Atelier 1 - Xcode et Interface Builder
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="atelier-2-parsing-de-donnees.html">
+            
+                <a href="atelier-2-parsing-de-donnees.html">
+            
+                    
+                    Atelier 2 - Parsing de données
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="atelier-3-navigation.html">
+            
+                <a href="atelier-3-navigation.html">
+            
+                    
+                    Atelier 3 - Navigation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="atelier-4-autolayout.html">
+            
+                <a href="atelier-4-autolayout.html">
+            
+                    
+                    Atelier 4 - Auto Layout
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="atelier-5-networking.html">
+            
+                <a href="atelier-5-networking.html">
+            
+                    
+                    Atelier 5 - Networking avec Alamofire
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="atelier-6-login.html">
+            
+                <a href="atelier-6-login.html">
+            
+                    
+                    Atelier 6 - Connexion et compte utilisateur
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="atelier-7-debug.html">
+            
+                <a href="atelier-7-debug.html">
+            
+                    
+                    Atelier 7 - Debug et amélioration du code
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="atelier-8-MapView.html">
+            
+                <a href="atelier-8-MapView.html">
+            
+                    
+                    Atelier 8 - Affichage de données sur une carte
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.10" data-path="atelier-9-GeolocalistionEtNotifications.html">
+            
+                <a href="atelier-9-GeolocalistionEtNotifications.html">
+            
+                    
+                    Atelier 9 - Géolocalisation et notifications
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >Atelier 9 - Géolocalisation et notifications</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="g&#xE9;olocalisation-et-notifications">G&#xE9;olocalisation et notifications</h1>
+<h2 id="introduction">Introduction</h2>
+<p>Dans cet atelier nous allons cr&#xE9;er une application qui vous pr&#xE9;vient quand vous entrez dans le p&#xE9;rim&#xE8;tre d&apos;une zone d&apos;inter&#xEA;t.</p>
+<p>Cela nous permettra de mettre en place la g&#xE9;olocalisation et les notifications.</p>
+<p><strong>Notions n&#xE9;cessaires :</strong> Gestion des droits utilisateurs, techniques de g&#xE9;olocalisation (d&#xE9;placements, d&#xE9;placements signifiants, geofencing, visites), gestion des notifications, debug de position (schema, GPX)</p>
+<h2 id="exercice-1---positionnez-lutilisateur">Exercice 1 - Positionnez l&apos;utilisateur</h2>
+<p>Nous allons commencer par placer l&apos;utilisateur sur la carte.</p>
+<ol>
+<li>Demandez le droit de localiser l&apos;utilisateur quand l&apos;application est lanc&#xE9;e : <code>requestWhenInUseAuthorization</code> de <code>CLLocationManager</code> dans le framework CoreLocation
+Note : vous pouvez utiliser un singleton <code>UserLocationManager</code> pour bien s&#xE9;parer le code ou directement le faire dans votre ViewController</li>
+<li>Ajoutez la variable <code>NSLocationWhenInUseUsageDescription</code> au fichier info.plist</li>
+<li>Cochez &quot;Show user Location&quot; pour la MapView dans le storyboard</li>
+</ol>
+<h2 id="exercice-2---ajoutez-du-geofencing">Exercice 2 - Ajoutez du geofencing</h2>
+<p>Nous allons surveiller les points d&apos;inter&#xEA;t pour &#xEA;tre pr&#xE9;venu quand l&apos;utilisateur est proche de l&apos;un d&apos;eux</p>
+<h3 id="premi&#xE8;re-&#xE9;tape-">Premi&#xE8;re &#xE9;tape :</h3>
+<p>Pour le geofencing nous avons besoin de la position de l&apos;utilisateur m&#xEA;me quand il n&apos;utilise pas l&apos;application (<code>.alwaysAuthorization</code>)</p>
+<ol>
+<li>Supprimez l&apos;application du simulateur pour effacer les droits que vous aviez demand&#xE9; pr&#xE9;c&#xE9;demment</li>
+<li>Demandez le droit de localiser l&apos;utilisateur tout le temps : <code>locationManager.requestAlwaysAuthorization</code></li>
+<li>Ajouter les variables <code>NSLocationAlwaysAndWhenInUseUsageDescription</code> et <code>NSLocationAlwaysUsageDescription</code> dans le info.plist</li>
+<li>Dans les r&#xE9;glages du projet &gt; Capabilities &gt; Background Mode, ajoutez LocationUpdates pour que le monitoring marche m&#xEA;me quand l&apos;app est pass&#xE9;e au second plan</li>
+</ol>
+<h3 id="deuxi&#xE8;me-&#xE9;tape-">Deuxi&#xE8;me &#xE9;tape :</h3>
+<p>Nous allons maintenant ajouter les points de geofencing quand la fonctionnalit&#xE9; est disponible</p>
+<ol>
+<li>Impl&#xE9;mentez la fonction didChangeAuthorization du protocole CLLocationManagerDelegate pour &#xEA;tre pr&#xE9;venu quand l&apos;utilisateur choisit le mode de g&#xE9;olocalisation permis</li>
+<li>Si l&apos;utilisateur accepte (status &#xE0; <code>authorizedAlways</code>), utilisez la fonction <code>startMonitoring</code> de <code>CLLocationManager</code> pour surveiller les FunMapPoints</li>
+<li>Impl&#xE9;mentez les fonctions <code>monitoringDidFailFor</code> et <code>didStartMonitoringFor</code> de <code>CLLocationManagerDelegate</code> pour v&#xE9;rifier que le monotoring est bien en place</li>
+<li>Impl&#xE9;mentez les fonctions <code>didEnterRegion</code> et <code>didExitRegion</code> de <code>CLLocationManagerDelegate</code>. Pour l&apos;instant, faites un print de la Region</li>
+<li>Testez diff&#xE9;rentes positions pour le user &#xE0; l&apos;aide de l&apos;option du simulateur &gt; Debug &gt; Location (notez que vous pouvez &#xE9;galement le faire &#xE0; partir de Xcode ou dans les options du Scheme du projet si vous n&apos;&#xEA;tes pas dans le simulateur)</li>
+</ol>
+<p>Note : <code>didEnterRegion</code> n&apos;est pas activ&#xE9; si l&apos;utilisateur est d&#xE9;j&#xE0; dans la r&#xE9;gion au lancement de l&apos;application.</p>
+<h2 id="exercice-3---envoyez-des-notifications-locales">Exercice 3 - Envoyez des notifications locales</h2>
+<p>Quand l&apos;utilisateur passe dans une zone d&apos;inter&#xEA;t nous allons maintenant lui envoyer une notification sur son t&#xE9;l&#xE9;phone.</p>
+<ol>
+<li>Abonnez-vous aux notifications locales. Voir : <code>UNUserNotificationCenter.current().requestAuthorization</code> et <code>UNAuthorizationOptions</code></li>
+<li>Quand l&apos;utilisateur entre dans une r&#xE9;gion envoyer une <code>UNNotificationRequest</code> avec un <code>UNMutableNotificationContent</code> correctement remplis (le titre de l&apos;emplacement par exemple)</li>
+<li>Impl&#xE9;mentez le protocole <code>UNUserNotificationCenterDelegate</code> , ajouter des print et tester l&apos;application en changeant la position du user dans le simulateur ou Xcode</li>
+<li>Ajoutez un <code>UNTimeIntervalNotificationTrigger</code> comme trigger de votre <code>UNNotificationRequest</code> afin d&apos;avoir le temps de passer l&apos;application en t&#xE2;che de fond avant que la notification ne soit lanc&#xE9;e</li>
+</ol>
+<p>Note : plut&#xF4;t que de faire comme l&apos;on vient de faire, il existe une option pour envoyer automatiquement une notification quand l&apos;utilisateur est proche d&apos;une position avec <code>UNLocationNotificationTrigger</code> (<a href="https://useyourloaf.com/blog/local-notifications-with-ios-10/" target="_blank">https://useyourloaf.com/blog/local-notifications-with-ios-10/</a>)</p>
+<h2 id="exercice-bonus---g&#xE9;rez-le-cas-o&#xF9;-lutilisateur-naccepte-pas-de-donner-sa-position-tout-le-temps">Exercice bonus - G&#xE9;rez le cas o&#xF9; l&apos;utilisateur n&apos;accepte pas de donner sa position tout le temps</h2>
+<p>Le Region Monitoring fonctionne uniquement avec .authorizedAlways et pas avec <code>.authorizedWhenInUse</code>. Aidons l&apos;utilisateur &#xE0; comprendre ce qu&apos;il se passe.</p>
+<ol>
+<li>En cas de <code>.authorizedWhenInUse</code>, afficher une alerte pour expliquer &#xE0; l&apos;utilisateur qu&apos;il ne sera pas au tenu au courant s&apos;il arrive dans un endroit fun</li>
+<li>Ajoutez un bouton qui permet d&apos;aller changer rapidement l&apos;option de g&#xE9;olocalisation en <code>.authorizedAlways</code> dans les r&#xE9;glages du t&#xE9;l&#xE9;phone :  <code>UIApplication.shared.openURL</code> et <code>UIApplicationOpenSettingsURLString)</code>
+Note : je vous conseille fortement le Pod SwiftMessages pour ce type d&apos;alerte. En &#xE9;tant moins intrusif, vous aurez plus de chances d&apos;&#xEA;tre lu.</li>
+</ol>
+<h2 id="exercice-bonus---surveiller-une-infinit&#xE9;-de-positions">Exercice bonus - Surveiller une infinit&#xE9; de positions</h2>
+<p> L&apos;API de geofencing limite &#xE0; 20 points d&apos;inter&#xEA;ts maximum.
+Imaginez que l&apos;on a plus de 20 positions &#xE0; surveiller. Comment feriez-vous ?</p>
+<p>Astuce : vous pouvez &#xEA;tre pr&#xE9;venu quand l&apos;utilisateur bouge gr&#xE2;ce &#xE0; la fonction <code>didUpdateLocations</code> du protocol <code>CLLocationManagerDelegate</code></p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="atelier-8-MapView.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: Atelier 8 - Affichage de données sur une carte">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Atelier 9 - Géolocalisation et notifications","level":"1.10","depth":1,"previous":{"title":"Atelier 8 - Affichage de données sur une carte","level":"1.9","depth":1,"path":"atelier-8-MapView.md","ref":"atelier-8-MapView.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"atelier-9-GeolocalistionEtNotifications.md","mtime":"2017-11-02T09:48:52.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2017-11-05T20:57:23.821Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
