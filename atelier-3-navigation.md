@@ -55,7 +55,7 @@ Note : vous pouvez récuperez certaines images dans ce fichier .zip : [MovieImag
 ![](/assets/Navigation_ListeDynamique.png)
 
 ## Exercice bonus 2 : ajoutez deux type de cellule
-1. Pour les mauvais films (rating < 7.2), n'affichez pas l'image et affichez le titre en en petit en gris
+1. Pour les mauvais films (rating < 7.2), n'affichez pas l'image et affichez le titre en petit en gris avec la note en gras sur la droite
 2. Pour les bons films, mettez une hauteur de cellule à 150 px pour les mauvais films hauteur de 40 px . Voir la fonction `tableView:heightForRowAtIndexPath`
 
 
