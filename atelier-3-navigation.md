@@ -46,12 +46,17 @@ Nous allons maintenant afficher les données que l'on a parsé dans l'atelier pr
 2. Dans cette fonction, il faut : a) créez un écran de type DetailViewController (`storyboard.instanciateViewController(identifier:"")`), b) lui donner le bon movie (`detailViewController.movie =`) puis c) le pusher dans le navigationController (`self.navigationController.push(viewController)`).
 
 ## Exercice bonus : ajoutez une image dans la liste
+Alors voilà... c'est malin vous avez déjà quasiment fini cet exercice bonus hier...
 1. Ajoutez une variable `imagePath` à la classe Movie en y mettant le poster_path du json
 2. Créez une fonction posterImage qui renvoie une image crée à partir d'`imagePath` : utilisation de `UIImage(named:)` et `dropFirst()` pour ne pas garder le premier caractère de poster_path
 2. Ajoutez une image dans les cellules de type MovieCell
 3. Remplissez l'image avec les bonnes données dans MovieCell et DetailViewController
 Note : vous pouvez récuperez certaines images dans ce fichier .zip : [MovieImage.zip](/tutorialFiles/MovieImage.zip)
 ![](/assets/Navigation_ListeDynamique.png)
+
+## Exercice bonus 2 : ajoutez deux type de cellule
+1. Pour les mauvais films (rating < 7.2), n'affichez pas l'image et affichez le titre en en petit en gris
+2. Pour les bons films, mettez une hauteur de cellule à 150 px pour les mauvais films hauteur de 40 px . Voir la fonction `tableView:heightForRowAtIndexPath`
 
 
 
