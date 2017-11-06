@@ -303,6 +303,7 @@
 <li>Dans cette fonction, il faut : a) cr&#xE9;ez un &#xE9;cran de type DetailViewController (<code>storyboard.instanciateViewController(identifier:&quot;&quot;)</code>), b) lui donner le bon movie (<code>detailViewController.movie =</code>) puis c) le pusher dans le navigationController (<code>self.navigationController.push(viewController)</code>).</li>
 </ol>
 <h2 id="exercice-bonus--ajoutez-une-image-dans-la-liste">Exercice bonus : ajoutez une image dans la liste</h2>
+<p>Alors voil&#xE0;... c&apos;est malin vous avez d&#xE9;j&#xE0; quasiment fini cet exercice bonus hier...</p>
 <ol>
 <li>Ajoutez une variable <code>imagePath</code> &#xE0; la classe Movie en y mettant le poster_path du json</li>
 <li>Cr&#xE9;ez une fonction posterImage qui renvoie une image cr&#xE9;e &#xE0; partir d&apos;<code>imagePath</code> : utilisation de <code>UIImage(named:)</code> et <code>dropFirst()</code> pour ne pas garder le premier caract&#xE8;re de poster_path</li>
@@ -310,6 +311,11 @@
 <li>Remplissez l&apos;image avec les bonnes donn&#xE9;es dans MovieCell et DetailViewController
 Note : vous pouvez r&#xE9;cuperez certaines images dans ce fichier .zip : <a href="tutorialFiles/MovieImage.zip">MovieImage.zip</a>
 <img src="assets/Navigation_ListeDynamique.png" alt=""></li>
+</ol>
+<h2 id="exercice-bonus-2--ajoutez-deux-type-de-cellule">Exercice bonus 2 : ajoutez deux type de cellule</h2>
+<ol>
+<li>Pour les mauvais films (rating &lt; 7.2), n&apos;affichez pas l&apos;image et affichez le titre en petit en gris avec la note en gras sur la droite</li>
+<li>Pour les bons films, mettez une hauteur de cellule &#xE0; 150 px pour les mauvais films hauteur de 40 px . Voir la fonction <code>tableView:heightForRowAtIndexPath</code></li>
 </ol>
 
                                 
@@ -354,7 +360,7 @@ Note : vous pouvez r&#xE9;cuperez certaines images dans ce fichier .zip : <a hre
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Atelier 3 - Navigation","level":"1.4","depth":1,"next":{"title":"Atelier 4 - Auto Layout","level":"1.5","depth":1,"path":"atelier-4-autolayout.md","ref":"atelier-4-autolayout.md","articles":[]},"previous":{"title":"Atelier 2 - Parsing de données","level":"1.3","depth":1,"path":"atelier-2-parsing-de-donnees.md","ref":"atelier-2-parsing-de-donnees.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"atelier-3-navigation.md","mtime":"2017-11-05T20:55:57.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2017-11-05T21:52:48.688Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Atelier 3 - Navigation","level":"1.4","depth":1,"next":{"title":"Atelier 4 - Auto Layout","level":"1.5","depth":1,"path":"atelier-4-autolayout.md","ref":"atelier-4-autolayout.md","articles":[]},"previous":{"title":"Atelier 2 - Parsing de données","level":"1.3","depth":1,"path":"atelier-2-parsing-de-donnees.md","ref":"atelier-2-parsing-de-donnees.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"atelier-3-navigation.md","mtime":"2017-11-06T18:58:06.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2017-11-06T19:31:17.957Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>

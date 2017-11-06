@@ -281,10 +281,6 @@
 <h3 id="activation-de-auto-layout">Activation de Auto Layout</h3>
 <p>Tout d&apos;abord, assurez-vous que votre fichier Main.storyboard utilise &#xAB; Auto Layout &#xBB;. Cela devrait d&#xE9;j&#xE0; &#xEA;tre le cas.</p>
 <p><img src="assets/xcode-ib-use-auto-layout.png" alt=""></p>
-<h3 id="&#xE9;dition-des-propriet&#xE9;s-dun-&#xE9;l&#xE9;ment-de-linterface-graphique">&#xC9;dition des propriet&#xE9;s d&apos;un &#xE9;l&#xE9;ment de l&apos;interface graphique</h3>
-<p>Les diff&#xE9;rentes propriet&#xE9;s d&apos;un &#xE9;l&#xE9;ment de l&apos;interface graphique peuvent &#xEA;tre &#xE9;dit&#xE9;es dans la partie &#xAB; Inspector &#xBB;, situ&#xE9;e &#xE0; droite de la fen&#xEA;tre Xcode.
-Par exemple, pour un UIButton, on peut configurer le titre, la taille du texte, sa couleur etc...</p>
-<p><img src="assets/button-attributes.png" alt=""></p>
 <h3 id="menus-pour-ajouter-des-contraintes-dauto-layout">Menus pour ajouter des contraintes d&apos;Auto Layout</h3>
 <p>Explorez Interface Builder, ses diff&#xE9;rents menu et onglets. En bas &#xE0; droite de la partie centrale d&apos;Interface Builder, on trouve les menus d&apos;ajout de contraintes.</p>
 <p><img src="assets/add-missing-constraints.png" alt=""></p>
@@ -316,18 +312,18 @@ Il sugg&#xE8;re &#xE9;galement des solutions pour r&#xE9;soudre le probl&#xE8;me
     &quot;&lt;NSLayoutConstraint:0x60400009e190 V:|-(0)-[UIImageView:0x7ffb9bd1b240]   (active, names: &apos;|&apos;:UITableViewCellContentView:0x7ffb9bd1ab20 )&gt;&quot;,
     &quot;&lt;NSLayoutConstraint:0x60400009f090 &apos;UIView-Encapsulated-Layout-Height&apos; UITableViewCellContentView:0x7ffb9bd1ab20.height == 150   (active)&gt;&quot;
 )
-</code></pre><h3 id="premier-exercice--les-2-boutons">Premier exercice : les 2 boutons</h3>
+</code></pre><h3 id="exercice-1--les-2-boutons">Exercice 1 : les 2 boutons</h3>
 <p>Essayez de re-cr&#xE9;er par vous m&#xEA;me l&apos;exercice de la demo live avec les 2 boutons de m&#xEA;me taille qui restent toujours en bas de l&apos;&#xE9;cran, quelques soient le device et l&apos;orientation.</p>
 <p>Pour valider que tout fonctionne comme voulu, s&#xE9;lectionnez les diff&#xE9;rentes vues de devices dans Interface Builder (les iPhones et iPads), et les orientations portrait et paysage. &#xC9;galement, lancez l&apos;app dans diff&#xE9;rents simulateurs.</p>
 <p><img src="assets/autolayout-2buttons-portrait.png" alt=""></p>
 <p><img src="assets/autolayout-2buttons-landscape.png" alt=""></p>
-<h3 id="deuxi&#xE8;me-exercice--la-galerie">Deuxi&#xE8;me exercice : la galerie</h3>
+<h3 id="exercice-2--la-galerie">Exercice 2 : la galerie</h3>
 <p>Essayez de re-cr&#xE9;er par vous m&#xEA;me le 2&#xE8;me exercice de la demo live, qui affiche un &#xE9;cran d&#xE9;coup&#xE9; en 4 parties &#xE9;gales. Chaque partie est d&apos;une couleur donn&#xE9;e, et affiche une image et un texte.
 Pensez bien &#xE0; tenir compte de la &#xAB; Safe Area &#xBB;.
 Cet affichage doit fonctionner quelques soient le device et l&apos;orientation. Testez notamment dans le simulateur de l&apos;iPhone X.</p>
 <p><img src="assets/galerie-portrait.png" alt=""></p>
 <p><img src="assets/galerie-landscape.png" alt=""></p>
-<h3 id="troisi&#xE8;me-exercice--auto-layout-dans-les-uitableview">Troisi&#xE8;me exercice : Auto Layout dans les UITableView</h3>
+<h3 id="exercice-3--auto-layout-dans-les-uitableview">Exercice 3 : Auto Layout dans les UITableView</h3>
 <p>Dans cet exercice, vous allez devoir afficher une liste de films.</p>
 <p>Reprenez le projet Xcode de l&apos;atelier 3, o&#xF9; vous aviez affich&#xE9; une liste de films et une vue de d&#xE9;tail, ou clonez ce repository qui contient la solution de l&apos;atelier 3 : <a href="https://github.com/Formation-iOS/Atelier3_Navigation" target="_blank">https://github.com/Formation-iOS/Atelier3_Navigation</a></p>
 <p>Voici &#xE0; quoi doit ressembler l&apos;affichage de la liste des films. Notez que le titre des films peut prendre plusieurs lignes, par exercice &#xAB; Guardians of the Galaxy Vol. 2 &#xBB;. Dans ce cas le texte de la description prendra moins de place.</p>
@@ -339,24 +335,22 @@ Cet affichage doit fonctionner quelques soient le device et l&apos;orientation. 
 <li>utilisez les notions de &#xAB; Content Hugging Priority &#xBB; et &#xAB; Content Compression Resistance Priority &#xBB;</li>
 </ul>
 <p>Note : votre classe qui h&#xE9;rite de UITableViewCell devrait &#xEA;tre d&#xE9;finie dans son propre fichier .swift.</p>
-<h3 id="quatri&#xE8;me-exercice--cellules-de-taille-dynamique-avec-auto-layout">Quatri&#xE8;me exercice : cellules de taille dynamique avec Auto Layout</h3>
-<p>Dans cet exercice, vous allez devoir afficher le d&#xE9;tail d&apos;un film. Continuez &#xE0; partir de votre projet Xcode de l&apos;exemple pr&#xE9;c&#xE9;dent (3&#xE8;me exemple).</p>
-<p>Lorsque l&apos;utilisateur clique sur un film dans la liste des films, c&apos;est cet &#xE9;cran de d&#xE9;tail qui doit appara&#xEE;tre.
-Comme dans l&apos;exercice pr&#xE9;c&#xE9;dent, le titre du film peut prendre plusieurs ligne. La diff&#xE9;rence est que la description doit &#xE0; pr&#xE9;sent appra&#xEE;tre compl&#xE8;tement. L&apos;utilisateur pourra faire d&#xE9;filer vers le bas si besoin (&#xAB; scroll &#xBB;).
-La taille de la cellule va donc d&#xE9;pendre &#xE0; la fois de la taille du titre du film, mais aussi de sa description.</p>
-<p><img src="assets/movie-detail.png" alt=""></p>
+<h3 id="exercice-4--cellule-de-taille-dynamiques">Exercice 4 : cellule de taille dynamiques</h3>
+<p>Certains synopsis de film sont trop longs et sont tronqu&#xE9;s. Nous allons adapter la taille de la cellule &#xE0; son contenu afin que l&apos;ensemble du synopsis soit visible.</p>
+<p>La taille de la cellule va donc d&#xE9;pendre &#xE0; la fois de la taille du titre du film, mais aussi de sa description.</p>
 <p>Pour cela, vous allez utiliser le calcul automatique de dimension de cellule d&apos;une UITableView : UITableViewAutomaticDimension.</p>
 <pre><code class="lang-swift"><span class="hljs-keyword">override</span> <span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">viewDidLoad</span><span class="hljs-params">()</span></span> {
-    <span class="hljs-keyword">super</span>.viewDidLoad()
+<span class="hljs-keyword">super</span>.viewDidLoad()
 
-    tableView.estimatedRowHeight = <span class="hljs-number">361</span>
-    tableView.rowHeight = <span class="hljs-type">UITableViewAutomaticDimension</span>
+tableView.estimatedRowHeight = <span class="hljs-number">200</span>
+tableView.rowHeight = <span class="hljs-type">UITableViewAutomaticDimension</span>
 }
 </code></pre>
-<p>A vous de jouer, encore une fois, utilisez Auto Layout ! La cellule doit avoir une hauteur calculable. Elle contient l&apos;image paysage, le titre, la note et la description du film. Sp&#xE9;cifiez autant de contraintes que n&#xE9;cessaires entre ces &#xE9;l&#xE9;ments pour que la hauteur du tout puisse &#xEA;tre calcul&#xE9;e.  </p>
-<h3 id="cinqui&#xE8;me-exercice--auto-layout-dans-les-uiscrollview">Cinqui&#xE8;me exercice : Auto Layout dans les UIScrollView</h3>
-<p>Cet exercice est plus avanc&#xE9;. C&apos;est un exercice en &#xAB; bonus &#xBB;, au cas o&#xF9; vous avez eu le temps de r&#xE9;aliser les 4 exercices pr&#xE9;c&#xE9;dents.</p>
-<p>Il s&apos;agit de re-impl&#xE9;menter la vue de d&#xE9;tail pr&#xE9;c&#xE9;dente, mais en utilisant cette fois-ci une UIScrollView, contenues dans un UIViewController basique.</p>
+<p>A vous de jouer, encore une fois, utilisez Auto Layout ! La cellule doit avoir une hauteur calculable sans ambiguit&#xE9; pour que le syt&#xE8;me marche correctement. Mettez donc bien les contraintes de haut en bas sans en oublier une.</p>
+<h3 id="exercice-bonus--auto-layout-dans-les-uiscrollview">Exercice bonus : Auto Layout dans les UIScrollView</h3>
+<p>Impl&#xE9;mentez une vue de d&#xE9;tail scrollable, en utilisant une UIScrollView, contenues dans un UIViewController basique.
+<strong><em>Indice 1</em></strong> : comme la scrollview ne doit pas scroller en horizontal, ajoutez une contrainte pour lui dire que sa Width doit &#xEA;tre &#xE9;gale &#xE0; celle de sa vue parente</p>
+<p><img src="assets/movie-detail.png" alt=""></p>
 <h2 id="pour-aller-plus-loin">Pour aller plus loin</h2>
 <p>Les points suivants ne sont pas abord&#xE9;s dans ce cours, car ils sont trop avanc&#xE9;s. N&#xE9;anmoins, il est bon de savoir qu&apos;ils existent, pour y avoir recours au cas o&#xF9; les m&#xE9;thodes moins avanc&#xE9;es sont trop limitantes.</p>
 <h3 id="cr&#xE9;ation-des-contraintes-dauto-layout-dans-le-code">Cr&#xE9;ation des contraintes d&apos;Auto Layout dans le code</h3>
@@ -408,7 +402,7 @@ La taille de la cellule va donc d&#xE9;pendre &#xE0; la fois de la taille du tit
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Atelier 4 - Auto Layout","level":"1.5","depth":1,"next":{"title":"Atelier 5 - Networking avec Alamofire","level":"1.6","depth":1,"path":"atelier-5-networking.md","ref":"atelier-5-networking.md","articles":[]},"previous":{"title":"Atelier 3 - Navigation","level":"1.4","depth":1,"path":"atelier-3-navigation.md","ref":"atelier-3-navigation.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"atelier-4-autolayout.md","mtime":"2017-11-04T16:29:48.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2017-11-05T21:52:48.688Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Atelier 4 - Auto Layout","level":"1.5","depth":1,"next":{"title":"Atelier 5 - Networking avec Alamofire","level":"1.6","depth":1,"path":"atelier-5-networking.md","ref":"atelier-5-networking.md","articles":[]},"previous":{"title":"Atelier 3 - Navigation","level":"1.4","depth":1,"path":"atelier-3-navigation.md","ref":"atelier-3-navigation.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"atelier-4-autolayout.md","mtime":"2017-11-06T19:27:57.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2017-11-06T19:31:17.957Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
