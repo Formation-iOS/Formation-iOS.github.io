@@ -139,14 +139,40 @@ tableView.estimatedRowHeight = 200
 tableView.rowHeight = UITableViewAutomaticDimension
 }
 ```
-A vous de jouer, encore une fois, utilisez Auto Layout ! La cellule doit avoir une hauteur calculable sans ambiguité pour que le sytème marche correctement. Mettez donc bien les contraintes de haut en bas sans en oublier une.
+A vous de jouer, encore une fois, utilisez Auto Layout ! La cellule doit avoir une hauteur calculable sans ambiguité pour que le sytème marche correctement.
 
-### Exercice bonus : Auto Layout dans les UIScrollView
 
-Implémentez une vue de détail scrollable, en utilisant une UIScrollView, contenues dans un UIViewController basique.
-***Indice 1*** : comme la scrollview ne doit pas scroller en horizontal, ajoutez une contrainte pour lui dire que sa Width doit être égale à celle de sa vue parente
+
+### Exercice 5 : Faire un écran scrollable avec une tableView à une cellule
+
+Petite astuce pour faire un écran scrollable.
+
+Dans cet exercice, vous allez devoir afficher le détail d'un film. Continuez à partir de votre projet Xcode de l'exemple précédent (3ème exemple).
+
+Lorsque l'utilisateur clique sur un film dans la liste des films, c'est cet écran de détail qui doit apparaître.
+Comme dans l'exercice précédent, le titre du film peut prendre plusieurs ligne. La différence est que la description doit à présent appraître complètement. L'utilisateur pourra faire défiler vers le bas si besoin (« scroll »).
+La taille de la cellule va donc dépendre à la fois de la taille du titre du film, mais aussi de sa description.
 
 ![](/assets/movie-detail.png)
+
+Pour cela, vous allez utiliser le calcul automatique de dimension de cellule d'une UITableView : UITableViewAutomaticDimension.
+
+```swift
+override func viewDidLoad() {
+    super.viewDidLoad()
+    
+    tableView.estimatedRowHeight = 361
+    tableView.rowHeight = UITableViewAutomaticDimension
+}
+```
+
+A vous de jouer, encore une fois, utilisez Auto Layout ! La cellule doit avoir une hauteur calculable. Elle contient l'image paysage, le titre, la note et la description du film. Spécifiez autant de contraintes que nécessaires entre ces éléments pour que la hauteur du tout puisse être calculée.  
+
+### Cinquième exercice : Auto Layout dans les UIScrollView
+
+Cet exercice est plus avancé. C'est un exercice en « bonus », au cas où vous avez eu le temps de réaliser les 4 exercices précédents.
+
+Il s'agit de re-implémenter la vue de détail précédente, mais en utilisant cette fois-ci une UIScrollView, contenues dans un UIViewController basique.
 
 ## Pour aller plus loin
 
