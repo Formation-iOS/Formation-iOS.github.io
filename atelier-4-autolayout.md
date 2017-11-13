@@ -102,6 +102,8 @@ Essayez de re-créer par vous même le 2ème exercice de la demo live, qui affic
 Pensez bien à tenir compte de la « Safe Area ».
 Cet affichage doit fonctionner quelques soient le device et l'orientation. Testez notamment dans le simulateur de l'iPhone X.
 
+Les 4 images sont disponibles dans ce fichier .zip : [Animals.zip](/tutorialFiles/Animals.zip)
+
 ![](/assets/galerie-portrait.png)
 
 ![](/assets/galerie-landscape.png)
