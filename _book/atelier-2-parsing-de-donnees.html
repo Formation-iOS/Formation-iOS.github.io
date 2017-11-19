@@ -266,37 +266,36 @@
                                 
                                 <h1 id="parsing-de-donn&#xE9;es">Parsing de donn&#xE9;es</h1>
 <h2 id="introduction">Introduction</h2>
-<p>Dans cet atelier nous allons cr&#xE9;er un mod&#xE8;le de donn&#xE9;es correspondant &#xE0; la base de TheMovieDB.</p>
-<p>Cela nous permettra de commencer &#xE0; utiliser les concepts de Swift. Notamment les optionnels et les variables.</p>
-<p><strong>Notions n&#xE9;cessaires :</strong> optionals (init et cast), MVC, d&#xE9;claration de variables, extensions, format de dates, format de string</p>
+<p>Dans cet atelier nous allons cr&#xE9;er un mod&#xE8;le de donn&#xE9;es correspondant &#xE0; la base de <a href="https://www.themoviedb.org/" target="_blank">TheMovieDB.org</a>.</p>
+<p>Cela nous permettra de commencer &#xE0; utiliser les concepts de Swift, notamment les optionals et les variables.</p>
+<p><strong>Notions n&#xE9;cessaires :</strong> optionals (init et cast), MVC, d&#xE9;claration de variables, format de dates, format de string</p>
 <h2 id="exercice-1--cr&#xE9;ation-du-mod&#xE8;le">Exercice 1- Cr&#xE9;ation du mod&#xE8;le</h2>
-<p>Dans un nouveau projet Xcode (Single View Template) cr&#xE9;ez une classe Movie avec :</p>
+<p>Dans un nouveau projet Xcode (Single View App), cr&#xE9;ez une classe Movie avec :</p>
 <ul>
 <li>un titre : <code>String</code></li>
 <li>un synopsis : <code>String</code></li>
-<li>une note moyenne : <code>Float</code></li>
+<li>une note moyenne : <code>Double</code></li>
 <li>une date de sortie : <code>Date</code></li>
 </ul>
 <h2 id="exercice-2---parsing-na&#xEF;f">Exercice 2 - Parsing na&#xEF;f</h2>
 <p>Le but va &#xEA;tre de parser le fichier suivant : <a href="tutorialFiles/BestMovie.json">BestMovie.json</a></p>
 <ol>
 <li>Ajoutez le fichier BestMovie.json &#xE0; votre projet </li>
-<li>Ajoutez le fichier <a href="tutorialFiles/JSONHelper.swift">JSONHelper.swift</a> (c&apos;est une extension pour r&#xE9;cup&#xE9;rer facilement un tableau de dictionnaires &#xE0; partir d&apos;un fichier json local en utilisant <code>JSONSerialization</code>)</li>
-<li>Transformez le contenu du fichier en un tableau de dictionnaire</li>
+<li>Ajoutez le fichier <a href="tutorialFiles/JSONHelper.swift">JSONHelper.swift</a> (c&apos;est une classe qui permet de r&#xE9;cup&#xE9;rer facilement un tableau de dictionnaires, &#xE0; partir d&apos;un fichier json local en utilisant <code>JSONSerialization</code>)</li>
+<li>Transformez le contenu du fichier en un tableau de dictionnaires</li>
 <li>Parcourez ces dictionnaires pour cr&#xE9;er des objets de type Movie. Pour la date, utilisez un <code>DateFormatter</code>. Pour les autres valeurs, faites un cast.</li>
-<li>Ajoutez une fonction description &#xE0; la classe movie et faites un print des objets r&#xE9;cup&#xE9;r&#xE9;s</li>
+<li>Ajoutez une description (computed property) &#xE0; la classe Movie et faites un print des objets r&#xE9;cup&#xE9;r&#xE9;s</li>
 </ol>
-<p><strong>Conseil :</strong> dans un premier temps consid&#xE9;rez que les donn&#xE9;es sont parfaitement remplies. Cela va vous faire gagner du temps avec les optionnals. Dans un deuxi&#xE8;me temps, faites un parsing plus robuste.</p>
+<p><strong>Conseil :</strong> dans un premier temps, consid&#xE9;rez que les donn&#xE9;es sont parfaitement remplies. Cela va vous faire gagner du temps avec les optionals. Dans un deuxi&#xE8;me temps, faites un parsing plus robuste.</p>
 <h2 id="exercice-3---parsing-&#xE0;-la-mode-swift-4">Exercice 3 - Parsing &#xE0; la mode Swift 4</h2>
-<p>Le but de l&apos;&#xE9;tape 2 &#xE9;tait surtout de vous faire manipuler du Swift. En pratique, on fait rarement ce processus &#xE0; la main. Depuis Swift 4 on peut utiliser le protocole <code>Codable</code> pour cela.</p>
+<p>Le but de l&apos;exercice 2 &#xE9;tait surtout de vous faire manipuler du Swift. En pratique, on fait rarement ce processus &#xE0; la main. Depuis Swift 4, on peut utiliser le protocole <code>Codable</code> pour cela.</p>
 <ol>
 <li>Adaptez votre projet pour qu&apos;il utilise le protocole <code>Codable</code> et <code>JSONDecoder</code></li>
 </ol>
-<p><strong>Pour aller plus loin</strong>: on est ici dans un cas simple mais le protocole semble suffisament puissant pour couvrir les cas plus complexes : <a href="http://benscheirman.com/2017/06/ultimate-guide-to-json-parsing-with-swift-4/" target="_blank">voir cet excellent tutorial de Ben Scheirman</a>  pour plus d&apos;infos.</p>
+<p><strong>Pour aller plus loin</strong> : on est ici dans un cas simple, mais le protocole semble suffisament puissant pour couvrir les cas plus complexes : <a href="http://benscheirman.com/2017/06/ultimate-guide-to-json-parsing-with-swift-4/" target="_blank">voir cet excellent tutorial de Ben Scheirman</a>  pour plus d&apos;infos.</p>
 <h2 id="exercice-bonus---affichage-des-donn&#xE9;es">Exercice bonus - Affichage des donn&#xE9;es</h2>
 <ol>
-<li>Reprenez l&apos;&#xE9;cran de l&apos;atelier pr&#xE9;c&#xE9;dent et rajouter la note et la date
-Note : ne vous inqui&#xE9;tez pas si le layout s&apos;adapte mal aux tailles d&apos;&#xE9;crans</li>
+<li>Reprenez l&apos;&#xE9;cran de l&apos;atelier pr&#xE9;c&#xE9;dent, et rajoutez la note et la date. Note : ne vous inqui&#xE9;tez pas si le layout s&apos;adapte mal aux tailles d&apos;&#xE9;crans. Continuez &#xE0; tester dans le simulateur de l&apos;iPhone 8.</li>
 <li>Remplissez l&apos;&#xE9;cran avec les donn&#xE9;es du premier film de votre tableau. Utilisez les outlets et changez les valeurs dans <code>viewDidLoad</code>. Utilisez le <code>DateFormater</code> pour afficher la date correctement.
 Note : laissez une image fixe pour l&apos;instant</li>
 <li>Ajoutez un bouton next qui permet d&apos;afficher le prochain film de la liste (en fin de liste revenez au premier &#xE9;l&#xE9;ment)</li>
@@ -345,7 +344,7 @@ Note : laissez une image fixe pour l&apos;instant</li>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Atelier 2 - Parsing de données","level":"1.3","depth":1,"next":{"title":"Atelier 3 - Navigation","level":"1.4","depth":1,"path":"atelier-3-navigation.md","ref":"atelier-3-navigation.md","articles":[]},"previous":{"title":"Atelier 1 - Xcode et Interface Builder","level":"1.2","depth":1,"path":"atelier-1-xcode-et-interface-builder.md","ref":"atelier-1-xcode-et-interface-builder.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"atelier-2-parsing-de-donnees.md","mtime":"2017-11-13T16:42:10.660Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2017-11-13T17:01:35.387Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Atelier 2 - Parsing de données","level":"1.3","depth":1,"next":{"title":"Atelier 3 - Navigation","level":"1.4","depth":1,"path":"atelier-3-navigation.md","ref":"atelier-3-navigation.md","articles":[]},"previous":{"title":"Atelier 1 - Xcode et Interface Builder","level":"1.2","depth":1,"path":"atelier-1-xcode-et-interface-builder.md","ref":"atelier-1-xcode-et-interface-builder.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"atelier-2-parsing-de-donnees.md","mtime":"2017-11-19T19:02:55.275Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2017-11-19T18:53:33.905Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
