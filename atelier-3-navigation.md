@@ -12,7 +12,7 @@ Reprenez le projet Xcode de l'atelier 2, où vous aviez récupéré une liste de
 
 ## Exercice 1- UITableView statique
 
-1. Créez une UITableView avec 4 cellules de film statiques de type Basic. Laissez le layout tel quel.
+1. Créez un UITableViewController avec 4 cellules de film statiques de type Basic. Laissez le layout tel quel.
 2. Créez un écran basique avec un fond rouge par exemple
 3. Au clic sur la cellule, ouvrez cet écran rouge en modal (`show` dans le storyboard)
 4. Créez une classe `DetailViewController`
