@@ -8,6 +8,8 @@ Cela nous permettra de travailler sur les transitions entre les écrans.
 
 **Notions nécessaires :** Différents conteneurs de navigation, transitions et type d'affichage, navigationController, delegate et data source, segue, cellules statiques et cellules dynamiques
 
+Reprenez le projet Xcode de l'atelier 2, où vous aviez récupéré une liste de films depuis un fichier .json, ou clonez ce repository qui contient la solution de l'atelier 2 : [https://github.com/Formation-iOS/Atelier2_ParsingCodable](https://github.com/Formation-iOS/Atelier2_ParsingCodable)
+
 ## Exercice 1- UITableView statique
 
 1. Créez une UITableView avec 4 cellules de film statiques de type Basic. Laissez le layout tel quel.
@@ -54,7 +56,7 @@ Nous allons maintenant afficher les données que l'on a parsé dans l'atelier pr
 2. Ajoutez une image dans les cellules de type MovieCell
 3. Remplissez l'image avec les bonnes données dans MovieCell et DetailViewController
 
-Note : vous pouvez récuperer des images dans ce fichier .zip : [MovieImage.zip](/tutorialFiles/MovieImage.zip)
+Note : vous pouvez récuperer des images dans ce fichier .zip : [MovieImage.zip](https://formation-ios.github.io/tutorialFiles/MovieImage.zip)
 ![](/assets/Navigation_ListeDynamique.png)
 
 ## Exercice bonus 2 : ajoutez deux type de cellule
