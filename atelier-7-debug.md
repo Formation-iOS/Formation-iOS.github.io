@@ -15,7 +15,7 @@ Votre mission est de corriger les bugs pour pouvoir publier l'application. Il es
 Vous allez utiliser les différents outils fournis par Xcode pour pouvoir étudier et observer le comportement de votre application :
 1. La console
 2. Le debugger
-3. Instruments
+3. L'outil « Debug memory graph »
 
 **Notions nécessaires :** debug, breakpoint, outlet, UIViewController life cycle, application life cycle,
 delegate, optional, utilisation mémoire, retention cycle, threading, main thread
@@ -33,6 +33,7 @@ Vous avez corrigé le crash numéro 1. Entrez votre « username » et « passwor
 Vous pouvez à présent voir la liste des « Popular Movies».
 
 Cliquez sur un film de la liste pour voir son détail. Deuxième crash !
+Après la correction de ce crash, assurez-vous que l'écran de détail affiche bien le détail du film sélectionné dans la liste.
 
 ## Il ne se passe rien quand on essaye d'ajouter un film à la « WatchList »
 
@@ -56,7 +57,7 @@ Une partie de la vue de détail d'un film ne s'affiche pas correctement : la des
 
 ## Les cellules des films n'affichent pas correctement les notes moyennes en rouge
 
-Dans la liste des films, la note d'un film devrait s'afficher en rouge si la note est plus grande que 8. Mais ce n'est pas le cas.
+Dans la liste des films, la note d'un film devrait s'afficher en rouge si la note est plus grande que 7,5. Mais ce n'est pas le cas.
 
 ## Un problème de mémoire
 
@@ -64,3 +65,5 @@ Cliquez sur quelques films pour voir leur détail.
 Ensuite, utilisez l'outil « Debug memory graph » pour observer l'utilisation de la mémoire dans l'application.
 
 Il y a un problème de mémoire. Lequel ?
+
+Si vous avez identifié le problème, mais ne savez pas comment le résoudre, demandez au formateur.
