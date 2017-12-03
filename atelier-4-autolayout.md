@@ -146,7 +146,8 @@ A vous de jouer, encore une fois, utilisez Auto Layout ! La cellule doit avoir u
 ### Exercice bonus : Auto Layout dans les UIScrollView
 
 Implémentez une vue de détail scrollable, en utilisant une UIScrollView, contenues dans un UIViewController basique.
-***Indice 1*** : comme la scrollview ne doit pas scroller en horizontal, ajoutez une contrainte pour lui dire que sa Width doit être égale à celle de sa vue parente
+
+***Astuce*** : comme la scrollview ne doit pas scroller en horizontal, ajoutez une contrainte pour lui dire que sa Width doit être égale à celle de sa vue parente
 
 ![](/assets/movie-detail.png)
 

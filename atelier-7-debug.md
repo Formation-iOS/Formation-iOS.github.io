@@ -46,11 +46,6 @@ Cliquez sur le bouton « Add to watchlist ». Il ne se passe rien.
 Vous avez fait en sorte qu'il se passe quelque chose lorsque vous cliquez sur le bouton « Ajouter à ma Watchlist ».
 Mais à présent un crash se produit juste après.
 
-## Le tab « Watchlist » ne se met pas à jour
-
-S'il a déjà été affiché une fois le tab qui affiche la « Watchlist » ne se met pas à jour quand vous ajoutez un film à la « Watchlist ».
-Indication : utilisez le [NotificationCenter](https://developer.apple.com/documentation/foundation/nsnotificationcenter).
-
 ## La vue de détail d'un film ne s'affiche pas correctement
 
 Une partie de la vue de détail d'un film ne s'affiche pas correctement : la description du film est coupée.
@@ -67,3 +62,8 @@ Ensuite, utilisez l'outil « Debug memory graph » pour observer l'utilisation d
 Il y a un problème de mémoire. Lequel ?
 
 Si vous avez identifié le problème, mais ne savez pas comment le résoudre, demandez au formateur.
+
+## Le tab « Watchlist » ne se met pas à jour
+
+S'il a déjà été affiché une fois le tab qui affiche la « Watchlist » ne se met pas à jour quand vous ajoutez un film à la « Watchlist ».
+Indication : utilisez le [NotificationCenter](https://developer.apple.com/documentation/foundation/nsnotificationcenter).
