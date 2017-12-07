@@ -12,6 +12,8 @@ Reprenez le projet Xcode de l'atelier 2, où vous aviez récupéré une liste de
 
 ## Exercice 1- UITableView statique
 
+Dans ce premier exercice nous allons créer une liste de 4 cellules hardcodées. Le click sur les cellules permettra d'afficher un nouvel écran.
+
 1. Créez un UITableViewController avec 4 cellules de film statiques de type Basic. Laissez le layout tel quel.
 2. Créez un écran basique avec un fond rouge par exemple
 3. Au clic sur la cellule, ouvrez cet écran rouge en modal (`show` dans le storyboard)
@@ -25,14 +27,14 @@ Reprenez le projet Xcode de l'atelier 2, où vous aviez récupéré une liste de
 
 ## Exercice 2- Navigation Controller
 
-Nous allons créer une navigation classique à base de 'Push'
+Nous allons créer une navigation classique à base de 'Push' plutôt qu'une navigation modale.
 
 1. Intégrez votre liste de film dans un `UINavigationController`
 2. Au clic sur la cellule, l'écran est maintenant affiché en mode push
 
 ## Exercice 3 - Données dynamiques
 
-Nous allons maintenant afficher les données que l'on a parsé dans l'atelier précédent.
+Nous allons maintenant afficher les données issues du JSON plutôt que des données hardcodées.
 
 1. Dans le storyboard, déclarez votre tableView dynamique et ajoutez une cellule avec un label pour le titre et un label pour la note.
 2. Créez une classe MovieCell qui dérive de `UITableViewCell`.
