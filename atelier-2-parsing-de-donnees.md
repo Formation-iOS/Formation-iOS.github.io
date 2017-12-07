@@ -15,7 +15,6 @@ Dans un nouveau projet Xcode \(Single View App\), créez une classe Movie avec :
 * un titre : `String`
 * un synopsis : `String`
 * une note moyenne : `Double`
-* une date de sortie : `Date`
 
 ## Exercice 2 - Parsing naïf
 
@@ -24,12 +23,14 @@ Le but va être de parser le fichier suivant : [BestMovie.json](/tutorialFiles/B
 1. Ajoutez le fichier BestMovie.json à votre projet 
 2. Ajoutez le fichier [JSONHelper.swift](/tutorialFiles/JSONHelper.swift) \(c'est une classe qui permet de récupérer facilement un tableau de dictionnaires, à partir d'un fichier json local en utilisant `JSONSerialization`\)
 3. Transformez le contenu du fichier en un tableau de dictionnaires
-4. Parcourez ces dictionnaires pour créer des objets de type Movie. Pour la date, utilisez un `DateFormatter`. Pour les autres valeurs, faites un cast.
-5. Ajoutez une description (computed property) à la classe Movie et faites un print des objets récupérés
+4. Parcourez ce tableau de dictionnaires pour créer des objets de type Movie correctement remplis. Swift étant fortement typé, pensez à faire un cast (`object as? String` par exemple).
+5. Pour tester que ca marche, faites un print des objets récupérés (astuce : vous pouvez ajouter une variable `description`  à la classe Movie pour indiquer comment print doit afficher un Movie)
 
-**Conseil :** dans un premier temps, considérez que les données sont parfaitement remplies. Cela va vous faire gagner du temps avec les optionals. Dans un deuxième temps, faites un parsing plus robuste.
+## Exercice 3 - Dates
+1. Ajoutez une variable releaseDate à votre classe Movie de type Date
+2. Récupérez l'info dans le JSON en utilisant un `DateFormatter` pour passer d'un String à une Date
 
-## Exercice 3 - Parsing à la mode Swift 4
+## Exercice 4 - Parsing à la mode Swift 4
 
 Le but de l'exercice 2 était surtout de vous faire manipuler du Swift. En pratique, on fait rarement ce processus à la main. Depuis Swift 4, on peut utiliser le protocole `Codable` pour cela.
 
