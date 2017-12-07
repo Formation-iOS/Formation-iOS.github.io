@@ -162,7 +162,7 @@ Alamofire.request("https://httpbin.org/get").responseJSON { response in
 
 Alamofire utilise les closures Swift. Une closure Swift est un bloc de code « indépendant ».
 Par exemple, on peut le passer en paramètre à des fonctions, dans le but de l'appeller dans l'implémentation de la fonction. C'est alors une sorte de « callback ».
-Une closure peut capturer des variables du contexte dans lequel elle est défini. Cette notion de capture s'appelle « closing over », d'où le terme « closure ».
+
 Dans l'exemple précédent, cette partie est une closure :
 
 ```swift
