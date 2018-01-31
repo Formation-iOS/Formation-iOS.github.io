@@ -28,24 +28,22 @@ Reprenez le projet Xcode de l'atelier 5, où vous aviez affiché une liste de fi
 Ce 1er exercice consiste à réaliser la partie interface graphique uniquement. 
 Il s'agit de créer un formulaire comprenant deux champs textes (UITextField), un pour l'identifiant et un pour le mot de passe, ainsi qu'un bouton « Connexion ». 
 
-Pour implémenter ce formulaire, vous allez utiliser un UITableViewController avec des cellules statiques.
-L'intérêt d'utiliser un UITableViewController est qu'il va s'occuper de la gestion du clavier pour vous, ce qui n'est pas le cas dans un UIViewController ([Gestion du clavier sans UITableViewController](https://developer.apple.com/library/content/documentation/StringsTextFonts/Conceptual/TextAndWebiPhoneOS/KeyboardManagement/KeyboardManagement.html)).
+Pour implémenter ce formulaire, vous allez utiliser une UIScrollView et le pod [IQKeyboardManagerSwift](https://cocoapods.org/pods/IQKeyboardManagerSwift).
+L'intérêt d'utiliser ce pod est qu'il va s'occuper de faire scroller les champs texte à la montée du clavier, ce qui n'est pas le cas par défaut sur iOS ([Gestion du clavier](https://developer.apple.com/library/content/documentation/StringsTextFonts/Conceptual/TextAndWebiPhoneOS/KeyboardManagement/KeyboardManagement.html)).
 
 ![](/assets/login.png)
 
-Lorsque le champ texte de l'identifiant est sélectionné, le clavier doit comporter un bouton « Next », comme dans la capture d'écran ci-dessous.
-Lorsque l'utilisateur clique sur le bouton « Next », le champ du mot de passe obtient le focus.
-Si l'utilisateur « scroll » vers le bas, les différents éléments de l'écran doivent s'afficher correctement, en particulier le bouton « Connexion ».
-
-![](/assets/login-next.png)
-
-Lorsque le champ texte du mot de passe est sélectionné, le clavier doit comporter un bouton « Done ».
-Lorsque l'utilisateur clique sur le bouton « Done », la validation de l'identifiant et du mot de passe est réalisée via un appel à l'API de themoviedb.org.
+Si le clavier est affiché, et que l'utilisateur « scroll » vers le bas, les différents éléments de l'écran doivent s'afficher correctement, en particulier le bouton « Connexion ».
+Lorsque l'utilisateur clique sur le bouton « Connexion », la validation de l'identifiant et du mot de passe est réalisée via un appel à l'API de themoviedb.org.
 Le champ texte du mot de passe doit cacher le mot de passe, comme dans la capture d'écran ci-dessous.
 
 ![](/assets/login-done.png)
 
-Indication : vous allez avoir besoin des méthodes becomeFirstResponder et resignFirstResponder du UITextField, ainsi que de son delegate.
+Dans AppDelegate.swift, activez IQKeyboardManagerSwift en ajoutant la ligne suivante dans la méthode didFinishLaunchingWithOptions :
+
+```swift
+IQKeyboardManager.sharedManager().enable = true
+```
 
 Validez que tout fonctionne correctement en lançant l'application dans le simulateur de l'iPhone SE.
 
@@ -195,10 +193,11 @@ Si vous avez le temps, vous pouvez implémenter l'ajout d'un film à la « Watch
 De nombreuses applications permettent à l'utilisateur de se connecter via leur compte Facebook, dans le cadre d'une authentification OAuth2.
 Si vous voulez en savoir, vous pouvez lire la [documentation Facebook](https://developers.facebook.com/docs/facebook-login/ios) sur le sujet.
 
-### Gestion du clavier en dehors d'un UITableViewController
+### Gestion du clavier avec un UITableViewController
 
-Comme mentionné plus haut, la gestion du clavier sans UITableViewController nécessite d'écrire du code spécifique pour répondre à l'apparition et à la disparition du clavier, comme décrit dans la [documentation d'Apple](https://developer.apple.com/library/content/documentation/StringsTextFonts/Conceptual/TextAndWebiPhoneOS/KeyboardManagement/KeyboardManagement.html).
-Écrire du code pour gérer le clavier n'est pas trivial, et même l'exemple d'Apple ne gère pas correctement certains détails. Il existe également des pods qui gèrent le clavier, comme par exemple IQKeyboardManager.
+On peut utiliser un UITableViewController pour gérer le scroll à l'apparition du clavier.
+Comme mentionné plus haut, la gestion du clavier nécessite d'écrire du code spécifique pour répondre à l'apparition et à la disparition du clavier, comme décrit dans la [documentation d'Apple](https://developer.apple.com/library/content/documentation/StringsTextFonts/Conceptual/TextAndWebiPhoneOS/KeyboardManagement/KeyboardManagement.html).
+Écrire du code pour gérer le clavier n'est pas trivial, et même l'exemple d'Apple ne gère pas correctement certains détails.
 
 ### Autre pod pour le feedback utilisateur
 
