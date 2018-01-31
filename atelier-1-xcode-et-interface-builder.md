@@ -11,7 +11,7 @@ Cela nous permettra de découvrir Xcode, l'organisation d'un projet et le très 
 ## Exercice 1- Première interface
 
 1. Dans Xcode, créez un projet "Single View App"
-2. Récupérez une image de film et ajoutez la au projet : [james-bond.jpg](/tutorialFiles/james-bond.jpg)
+2. Récupérez une image de film et ajoutez la au projet : [james-bond.jpg](https://formation-ios.github.io/tutorialFiles/james-bond.jpg)
 3. Reproduisez l'interface ci-dessous (une image et deux label).
 
 Pour l'instant, ne vous inquiétez pas si le layout s'adapte mal aux tailles d’écrans.
