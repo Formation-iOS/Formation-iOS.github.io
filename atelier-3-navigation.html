@@ -271,6 +271,7 @@
 <p><strong>Notions n&#xE9;cessaires :</strong> Diff&#xE9;rents conteneurs de navigation, transitions et type d&apos;affichage, navigationController, delegate et data source, segue, cellules statiques et cellules dynamiques</p>
 <p>Reprenez le projet Xcode de l&apos;atelier 2, o&#xF9; vous aviez r&#xE9;cup&#xE9;r&#xE9; une liste de films depuis un fichier .json, ou clonez ce repository qui contient la solution de l&apos;atelier 2 : <a href="https://github.com/Formation-iOS/Atelier2_ParsingCodable" target="_blank">https://github.com/Formation-iOS/Atelier2_ParsingCodable</a></p>
 <h2 id="exercice-1--uitableview-statique">Exercice 1- UITableView statique</h2>
+<p>Dans ce premier exercice nous allons cr&#xE9;er une liste de 4 cellules hardcod&#xE9;es. Le click sur les cellules permettra d&apos;afficher un nouvel &#xE9;cran.</p>
 <ol>
 <li>Cr&#xE9;ez un UITableViewController avec 4 cellules de film statiques de type Basic. Laissez le layout tel quel.</li>
 <li>Cr&#xE9;ez un &#xE9;cran basique avec un fond rouge par exemple</li>
@@ -282,13 +283,13 @@
 </ol>
 <p><img src="assets/Navigation_1.png" alt=""></p>
 <h2 id="exercice-2--navigation-controller">Exercice 2- Navigation Controller</h2>
-<p>Nous allons cr&#xE9;er une navigation classique &#xE0; base de &apos;Push&apos;</p>
+<p>Nous allons cr&#xE9;er une navigation classique &#xE0; base de &apos;Push&apos; plut&#xF4;t qu&apos;une navigation modale.</p>
 <ol>
 <li>Int&#xE9;grez votre liste de film dans un <code>UINavigationController</code></li>
 <li>Au clic sur la cellule, l&apos;&#xE9;cran est maintenant affich&#xE9; en mode push</li>
 </ol>
 <h2 id="exercice-3---donn&#xE9;es-dynamiques">Exercice 3 - Donn&#xE9;es dynamiques</h2>
-<p>Nous allons maintenant afficher les donn&#xE9;es que l&apos;on a pars&#xE9; dans l&apos;atelier pr&#xE9;c&#xE9;dent.</p>
+<p>Nous allons maintenant afficher les donn&#xE9;es issues du JSON plut&#xF4;t que des donn&#xE9;es hardcod&#xE9;es.</p>
 <ol>
 <li>Dans le storyboard, d&#xE9;clarez votre tableView dynamique et ajoutez une cellule avec un label pour le titre et un label pour la note.</li>
 <li>Cr&#xE9;ez une classe MovieCell qui d&#xE9;rive de <code>UITableViewCell</code>.</li>
@@ -364,7 +365,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Atelier 3 - Navigation","level":"1.4","depth":1,"next":{"title":"Atelier 4 - Auto Layout","level":"1.5","depth":1,"path":"atelier-4-autolayout.md","ref":"atelier-4-autolayout.md","articles":[]},"previous":{"title":"Atelier 2 - Parsing de données","level":"1.3","depth":1,"path":"atelier-2-parsing-de-donnees.md","ref":"atelier-2-parsing-de-donnees.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"atelier-3-navigation.md","mtime":"2017-12-03T22:59:49.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2017-12-03T23:08:27.067Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Atelier 3 - Navigation","level":"1.4","depth":1,"next":{"title":"Atelier 4 - Auto Layout","level":"1.5","depth":1,"path":"atelier-4-autolayout.md","ref":"atelier-4-autolayout.md","articles":[]},"previous":{"title":"Atelier 2 - Parsing de données","level":"1.3","depth":1,"path":"atelier-2-parsing-de-donnees.md","ref":"atelier-2-parsing-de-donnees.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"atelier-3-navigation.md","mtime":"2018-01-08T14:21:22.271Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-01-31T21:10:09.839Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
