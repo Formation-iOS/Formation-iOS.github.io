@@ -67,3 +67,6 @@ Si vous avez identifié le problème, mais ne savez pas comment le résoudre, de
 
 S'il a déjà été affiché une fois le tab qui affiche la « Watchlist » ne se met pas à jour quand vous ajoutez un film à la « Watchlist ».
 Indication : utilisez le [NotificationCenter](https://developer.apple.com/documentation/foundation/nsnotificationcenter).
+
+- d'un côté, faites un « post » : `NotificationCenter.default.post(name: Notification.Name("SomeNotificationName"), object: nil)`
+- de l'autre, utilisez un « observer » : `NotificationCenter.default.addObserver(self, selector: #selector(SomeClass.someFunction), name: Notification.Name("SomeNotificationName"), object: nil)`
