@@ -22,6 +22,8 @@ delegate, optional, utilisation mémoire, retention cycle, threading, main threa
 
 Clonez ce repository qui contient l'application à debugger : [https://github.com/Formation-iOS/Atelier7_Debug](https://github.com/Formation-iOS/Atelier7_Debug).
 
+N'oubliez pas de faire un "pod install" dans le terminal.
+
 ## Crash numéro 1
 
 Lancez l'application. Premier crash !
