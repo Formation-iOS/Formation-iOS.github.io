@@ -15,7 +15,7 @@ Dans ce première exercice, nous allons placer quelques points rigolos repérés
 ![](/assets/MapView_MapOverview.png)
 
 1. Créez un nouveau projet Atelier8_MapView
-2. Récupérez le fichier [AmazingPlaces.plist](tutorialFiles/AmazingPlaces.plist) et le fichier [FunMapPoint.swift](tutorialFiles/FunMapPoint.swift) pour parser ce plist
+2. Récupérez le fichier [AmazingPlaces.plist](https://formation-ios.github.io/tutorialFiles/AmazingPlaces.plist) et le fichier [FunMapPoint.swift](https://formation-ios.github.io/tutorialFiles/FunMapPoint.swift) pour parser ce plist
 3. Ajoutez une vue MapView à l'écran principale et créez un outlet sur la MapView
 4. Créez une classe FunAnnotation. Cette classe doit :
         1. avoir un initializer de type `required init(mapPoint: FunMapPoint)`
@@ -30,7 +30,7 @@ Dans ce première exercice, nous allons placer quelques points rigolos repérés
 Au click sur les points, nous allons zoomer pour que l'utilisateur voit instantanément le point d'interêt au bon niveau de zoom.
 
 1. Autorisez l'affichage d'un callout au `MKMarkerAnnotationView` que vous renvoyez (canShowCallout = true)
-2. Ajouter un `rightCalloutAccessoryView` à votre AnnotationView qui serait un bouton avec [une icône de loupe](/tutorialFiles/Zoom.jpg) par exemple. Note : pensez à régler la frame du bouton sinon il aura une taille de zéro par défaut
+2. Ajouter un `rightCalloutAccessoryView` à votre AnnotationView qui serait un bouton avec [une icône de loupe](https://formation-ios.github.io/tutorialFiles/Zoom.jpg) par exemple. Note : pensez à régler la frame du bouton sinon il aura une taille de zéro par défaut
 3. Implémentez la fonction `mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl)` pour être prévenu quand l'utilisateur clique sur votre bouton
 4. Au click sur le callout, changez la région visible en centrant sur l'annotation avec le bon niveau de zoom (voir `MKCoordinateRegion` et `mapView.setRegion`)
 
