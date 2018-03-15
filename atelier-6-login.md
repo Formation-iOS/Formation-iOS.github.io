@@ -188,7 +188,7 @@ Si vous avez le temps, vous pouvez implémenter l'ajout d'un film à la « Watch
 
 ## Avancé
 
-### Connection avec Facebook
+### Connexion avec Facebook
 
 De nombreuses applications permettent à l'utilisateur de se connecter via leur compte Facebook, dans le cadre d'une authentification OAuth2.
 Si vous voulez en savoir, vous pouvez lire la [documentation Facebook](https://developers.facebook.com/docs/facebook-login/ios) sur le sujet.

@@ -10,7 +10,7 @@ Cela nous permettra de travailler sur les MapView, les annotations et les dépla
 
 ## Exercice 1- Première carte avec des points
 
-Dans ce première exercice, nous allons placer quelques points rigolos repérés sur Google Earth (données tirées de http://twistedsifter.com/2014/02/50-amazing-finds-on-google-earth/)
+Dans ce premier exercice, nous allons placer quelques points rigolos repérés sur Google Earth (données tirées de http://twistedsifter.com/2014/02/50-amazing-finds-on-google-earth/)
 
 ![](/assets/MapView_MapOverview.png)
 
