@@ -2,7 +2,7 @@
 
 ## Introduction
 
-Dans cet atelier nous allons faire une application qui permet de voir des endroits marrants repérés depuis Google Earth.
+Dans cet atelier, nous allons faire une application qui permet de voir des endroits marrants repérés depuis Google Earth.
 
 Cela nous permettra de travailler sur les MapView, les annotations et les déplacements sur la carte.
 
@@ -16,7 +16,7 @@ Dans ce première exercice, nous allons placer quelques points rigolos repérés
 
 1. Créez un nouveau projet Atelier8_MapView
 2. Récupérez le fichier [AmazingPlaces.plist](https://formation-ios.github.io/tutorialFiles/AmazingPlaces.plist) et le fichier [FunMapPoint.swift](https://formation-ios.github.io/tutorialFiles/FunMapPoint.swift) pour parser ce plist
-3. Ajoutez une vue MapView à l'écran principale et créez un outlet sur la MapView
+3. Ajoutez une vue MKMapView à l'écran principal, avec le type satelitte, et créez un outlet sur la MapView
 4. Créez une classe FunAnnotation. Cette classe doit :
         1. avoir un initializer de type `required init(mapPoint: FunMapPoint)`
         2. implémenter le protocole `MKAnnotation` (et donc dériver de `NSObject`)
@@ -38,11 +38,12 @@ Au click sur les points, nous allons zoomer pour que l'utilisateur voit instanta
 
 ## Exercice bonus - Bouton dezoom
 
-Quand l'utilisateur a zoomé sur un point il est fastidieux de revenir à la vue globale. Nous allons ajouter un bouton pour cela.
+Quand l'utilisateur a zoomé sur un point, il est fastidieux de revenir à la vue globale. Nous allons ajouter un bouton pour cela.
 1. Ajoutez un bouton "unzoom" à votre interface
 2. À l'affichage de l'écran centrez la carte sur le point (0,0) et mettez le niveau de zoom à 160 en lattitude, 180 en longitude
 3. Branchez le bouton Unzoom sur une action qui centre la carte sur le point initial
-4. Cachez le bouton quand le niveau de zoom est inférieur au zoom initial. Pour savoir quand le niveau de zoom change, implémentez la fonction  `mapView(_ mapView: MKMapView, regionDidChangeAnimated animated: Bool)`
+4. Cachez le bouton quand le niveau de zoom est inférieur au zoom initial. Pour savoir quand le niveau de zoom change, implémentez la fonction  `mapView(_ mapView: MKMapView, regionDidChangeAnimated animated: Bool)`.
+Utilisez le `span` de la `region` de la MapView.
 
 ![](/assets/MapView_Unzoom.png)
 
