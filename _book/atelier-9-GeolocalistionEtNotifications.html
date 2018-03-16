@@ -264,35 +264,37 @@
                                 
                                 <h1 id="g&#xE9;olocalisation-et-notifications">G&#xE9;olocalisation et notifications</h1>
 <h2 id="introduction">Introduction</h2>
-<p>Dans cet atelier nous allons cr&#xE9;er une application qui vous pr&#xE9;vient quand vous entrez dans le p&#xE9;rim&#xE8;tre d&apos;une zone d&apos;inter&#xEA;t.</p>
+<p>Dans cet atelier, nous allons cr&#xE9;er une application qui vous pr&#xE9;vient quand vous entrez dans le p&#xE9;rim&#xE8;tre d&apos;une zone d&apos;int&#xE9;r&#xEA;t.</p>
 <p>Cela nous permettra de mettre en place la g&#xE9;olocalisation et les notifications.</p>
 <p><strong>Notions n&#xE9;cessaires :</strong> Gestion des droits utilisateurs, techniques de g&#xE9;olocalisation (d&#xE9;placements, d&#xE9;placements signifiants, geofencing, visites), gestion des notifications, debug de position (schema, GPX)</p>
 <h2 id="exercice-1---positionnez-lutilisateur">Exercice 1 - Positionnez l&apos;utilisateur</h2>
 <p>Nous allons commencer par placer l&apos;utilisateur sur la carte.</p>
 <ol>
-<li>Demandez le droit de localiser l&apos;utilisateur quand l&apos;application est lanc&#xE9;e : <code>requestWhenInUseAuthorization</code> de <code>CLLocationManager</code> dans le framework CoreLocation
-Note : vous pouvez utiliser un singleton <code>UserLocationManager</code> pour bien s&#xE9;parer le code ou directement le faire dans votre ViewController</li>
-<li>Ajoutez la variable <code>NSLocationWhenInUseUsageDescription</code> au fichier info.plist</li>
-<li>Cochez &quot;Show user Location&quot; pour la MapView dans le storyboard</li>
+<li>Demandez le droit de localiser l&apos;utilisateur quand l&apos;application est lanc&#xE9;e : <code>requestWhenInUseAuthorization</code> de <code>CLLocationManager</code> dans le framework CoreLocation.
+Note : vous pouvez utiliser un singleton <code>UserLocationManager</code> pour bien s&#xE9;parer le code, ou directement le faire dans votre ViewController.</li>
+<li>Ajoutez la variable <code>NSLocationWhenInUseUsageDescription</code> au fichier Info.plist.</li>
+<li>Cochez &quot;User Location&quot; pour la MapView dans le storyboard.</li>
 </ol>
+<p>Pour valider que la position de l&apos;utilisateur s&apos;affiche sur la carte, on peut s&#xE9;lectionner une position g&#xE9;ographique comme dans la capture d&apos;&#xE9;cran ci-dessous, ou utiliser le menu Debug &gt; Location du simulateur.</p>
+<p><img src="assets/debug-location.png" alt=""></p>
 <h2 id="exercice-2---ajoutez-du-geofencing">Exercice 2 - Ajoutez du geofencing</h2>
-<p>Nous allons surveiller les points d&apos;inter&#xEA;t pour &#xEA;tre pr&#xE9;venu quand l&apos;utilisateur est proche de l&apos;un d&apos;eux</p>
+<p>Nous allons surveiller les points d&apos;inter&#xEA;t pour &#xEA;tre pr&#xE9;venus quand l&apos;utilisateur est proche de l&apos;un d&apos;eux.</p>
 <h3 id="premi&#xE8;re-&#xE9;tape-">Premi&#xE8;re &#xE9;tape :</h3>
-<p>Pour le geofencing nous avons besoin de la position de l&apos;utilisateur m&#xEA;me quand il n&apos;utilise pas l&apos;application (<code>.alwaysAuthorization</code>)</p>
+<p>Pour le geofencing, nous avons besoin de la position de l&apos;utilisateur m&#xEA;me quand il n&apos;utilise pas l&apos;application (<code>.alwaysAuthorization</code>).</p>
 <ol>
 <li>Supprimez l&apos;application du simulateur pour effacer les droits que vous aviez demand&#xE9; pr&#xE9;c&#xE9;demment</li>
 <li>Demandez le droit de localiser l&apos;utilisateur tout le temps : <code>locationManager.requestAlwaysAuthorization</code></li>
-<li>Ajouter les variables <code>NSLocationAlwaysAndWhenInUseUsageDescription</code> et <code>NSLocationAlwaysUsageDescription</code> dans le info.plist</li>
+<li>Ajouter les variables <code>NSLocationAlwaysAndWhenInUseUsageDescription</code> et <code>NSLocationAlwaysUsageDescription</code> dans le Info.plist</li>
 <li>Dans les r&#xE9;glages du projet &gt; Capabilities &gt; Background Mode, ajoutez LocationUpdates pour que le monitoring marche m&#xEA;me quand l&apos;app est pass&#xE9;e au second plan</li>
 </ol>
 <h3 id="deuxi&#xE8;me-&#xE9;tape-">Deuxi&#xE8;me &#xE9;tape :</h3>
-<p>Nous allons maintenant ajouter les points de geofencing quand la fonctionnalit&#xE9; est disponible</p>
+<p>Nous allons maintenant ajouter les points de geofencing quand la fonctionnalit&#xE9; est disponible.</p>
 <ol>
-<li>Impl&#xE9;mentez la fonction didChangeAuthorization du protocole CLLocationManagerDelegate pour &#xEA;tre pr&#xE9;venu quand l&apos;utilisateur choisit le mode de g&#xE9;olocalisation permis</li>
+<li>Impl&#xE9;mentez la fonction <code>didChangeAuthorization</code> du protocole <code>CLLocationManagerDelegate</code> pour &#xEA;tre pr&#xE9;venu quand l&apos;utilisateur choisit le mode de g&#xE9;olocalisation permis</li>
 <li>Si l&apos;utilisateur accepte (status &#xE0; <code>authorizedAlways</code>), utilisez la fonction <code>startMonitoring</code> de <code>CLLocationManager</code> pour surveiller les FunMapPoints</li>
 <li>Impl&#xE9;mentez les fonctions <code>monitoringDidFailFor</code> et <code>didStartMonitoringFor</code> de <code>CLLocationManagerDelegate</code> pour v&#xE9;rifier que le monotoring est bien en place</li>
-<li>Impl&#xE9;mentez les fonctions <code>didEnterRegion</code> et <code>didExitRegion</code> de <code>CLLocationManagerDelegate</code>. Pour l&apos;instant, faites un print de la Region</li>
-<li>Testez diff&#xE9;rentes positions pour le user &#xE0; l&apos;aide de l&apos;option du simulateur &gt; Debug &gt; Location (notez que vous pouvez &#xE9;galement le faire &#xE0; partir de Xcode ou dans les options du Scheme du projet si vous n&apos;&#xEA;tes pas dans le simulateur)</li>
+<li>Impl&#xE9;mentez les fonctions <code>didEnterRegion</code> et <code>didExitRegion</code> de <code>CLLocationManagerDelegate</code>. Pour l&apos;instant, faites un print de la Region.</li>
+<li>Testez diff&#xE9;rentes positions pour le user &#xE0; l&apos;aide de l&apos;option du simulateur &gt; Debug &gt; Location (notez que vous pouvez &#xE9;galement le faire comme indiqu&#xE9; pr&#xE9;c&#xE9;demment, ou dans les options du Scheme du projet si vous n&apos;&#xEA;tes pas dans le simulateur)</li>
 </ol>
 <p>Note : <code>didEnterRegion</code> n&apos;est pas activ&#xE9; si l&apos;utilisateur est d&#xE9;j&#xE0; dans la r&#xE9;gion au lancement de l&apos;application.</p>
 <h2 id="exercice-3---envoyez-des-notifications-locales">Exercice 3 - Envoyez des notifications locales</h2>
@@ -300,21 +302,20 @@ Note : vous pouvez utiliser un singleton <code>UserLocationManager</code> pour b
 <ol>
 <li>Abonnez-vous aux notifications locales. Voir : <code>UNUserNotificationCenter.current().requestAuthorization</code> et <code>UNAuthorizationOptions</code></li>
 <li>Quand l&apos;utilisateur entre dans une r&#xE9;gion envoyer une <code>UNNotificationRequest</code> avec un <code>UNMutableNotificationContent</code> correctement remplis (le titre de l&apos;emplacement par exemple)</li>
-<li>Impl&#xE9;mentez le protocole <code>UNUserNotificationCenterDelegate</code> , ajouter des print et tester l&apos;application en changeant la position du user dans le simulateur ou Xcode</li>
-<li>Ajoutez un <code>UNTimeIntervalNotificationTrigger</code> comme trigger de votre <code>UNNotificationRequest</code> afin d&apos;avoir le temps de passer l&apos;application en t&#xE2;che de fond avant que la notification ne soit lanc&#xE9;e</li>
+<li>Impl&#xE9;mentez le protocole <code>UNUserNotificationCenterDelegate</code>, ajoutez des print et testez l&apos;application en changeant la position de l&apos;utilisateur via le simulateur ou Xcode</li>
+<li>Ajoutez un <code>UNTimeIntervalNotificationTrigger</code> comme trigger de votre <code>UNNotificationRequest</code>, afin d&apos;avoir le temps de passer l&apos;application en t&#xE2;che de fond avant que la notification ne soit lanc&#xE9;e</li>
 </ol>
 <p>Note : plut&#xF4;t que de faire comme l&apos;on vient de faire, il existe une option pour envoyer automatiquement une notification quand l&apos;utilisateur est proche d&apos;une position avec <code>UNLocationNotificationTrigger</code> (<a href="https://useyourloaf.com/blog/local-notifications-with-ios-10/" target="_blank">https://useyourloaf.com/blog/local-notifications-with-ios-10/</a>)</p>
 <h2 id="exercice-bonus---g&#xE9;rez-le-cas-o&#xF9;-lutilisateur-naccepte-pas-de-donner-sa-position-tout-le-temps">Exercice bonus - G&#xE9;rez le cas o&#xF9; l&apos;utilisateur n&apos;accepte pas de donner sa position tout le temps</h2>
-<p>Le Region Monitoring fonctionne uniquement avec .authorizedAlways et pas avec <code>.authorizedWhenInUse</code>. Aidons l&apos;utilisateur &#xE0; comprendre ce qu&apos;il se passe.</p>
+<p>Le monitoring de r&#xE9;gions fonctionne uniquement avec <code>.authorizedAlways</code> et pas avec <code>.authorizedWhenInUse</code>. Aidons l&apos;utilisateur &#xE0; comprendre ce qu&apos;il se passe.</p>
 <ol>
-<li>En cas de <code>.authorizedWhenInUse</code>, afficher une alerte pour expliquer &#xE0; l&apos;utilisateur qu&apos;il ne sera pas au tenu au courant s&apos;il arrive dans un endroit fun</li>
-<li>Ajoutez un bouton qui permet d&apos;aller changer rapidement l&apos;option de g&#xE9;olocalisation en <code>.authorizedAlways</code> dans les r&#xE9;glages du t&#xE9;l&#xE9;phone :  <code>UIApplication.shared.openURL</code> et <code>UIApplicationOpenSettingsURLString)</code>
-Note : je vous conseille fortement le Pod SwiftMessages pour ce type d&apos;alerte. En &#xE9;tant moins intrusif, vous aurez plus de chances d&apos;&#xEA;tre lu.</li>
+<li>En cas de <code>.authorizedWhenInUse</code>, affichez une alerte pour expliquer &#xE0; l&apos;utilisateur qu&apos;il ne sera pas tenu au courant s&apos;il arrive dans une zone d&apos;int&#xE9;r&#xEA;t. Note : vous pouvez utiliser le Pod SwiftMessages pour ce type d&apos;alerte. En &#xE9;tant moins intrusif, vous aurez plus de chance d&apos;&#xEA;tre.</li>
+<li>Ajoutez un bouton qui permet d&apos;aller changer rapidement l&apos;option de g&#xE9;olocalisation en <code>.authorizedAlways</code> dans les r&#xE9;glages du t&#xE9;l&#xE9;phone. Pour cela, utilisez <code>UIApplication.shared.openURL</code> et <code>UIApplicationOpenSettingsURLString</code>.</li>
 </ol>
 <h2 id="exercice-bonus---surveiller-une-infinit&#xE9;-de-positions">Exercice bonus - Surveiller une infinit&#xE9; de positions</h2>
-<p> L&apos;API de geofencing limite &#xE0; 20 points d&apos;inter&#xEA;ts maximum.
+<p>L&apos;API de geofencing limite &#xE0; 20 points d&apos;inter&#xEA;ts maximum.
 Imaginez que l&apos;on a plus de 20 positions &#xE0; surveiller. Comment feriez-vous ?</p>
-<p>Astuce : vous pouvez &#xEA;tre pr&#xE9;venu quand l&apos;utilisateur bouge gr&#xE2;ce &#xE0; la fonction <code>didUpdateLocations</code> du protocol <code>CLLocationManagerDelegate</code></p>
+<p>Astuce : vous pouvez &#xEA;tre pr&#xE9;venu quand l&apos;utilisateur bouge gr&#xE2;ce &#xE0; la fonction <code>didUpdateLocations</code> du protocol <code>CLLocationManagerDelegate</code>.</p>
 
                                 
                                 </section>
@@ -354,7 +355,7 @@ Imaginez que l&apos;on a plus de 20 positions &#xE0; surveiller. Comment feriez-
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Atelier 9 - Géolocalisation et notifications","level":"1.10","depth":1,"previous":{"title":"Atelier 8 - Affichage de données sur une carte","level":"1.9","depth":1,"path":"atelier-8-MapView.md","ref":"atelier-8-MapView.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"atelier-9-GeolocalistionEtNotifications.md","mtime":"2017-11-13T16:42:10.670Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-03-15T14:51:08.647Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Atelier 9 - Géolocalisation et notifications","level":"1.10","depth":1,"previous":{"title":"Atelier 8 - Affichage de données sur une carte","level":"1.9","depth":1,"path":"atelier-8-MapView.md","ref":"atelier-8-MapView.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"atelier-9-GeolocalistionEtNotifications.md","mtime":"2018-03-16T16:53:24.893Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-03-16T16:51:39.553Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
