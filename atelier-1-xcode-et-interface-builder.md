@@ -2,17 +2,17 @@
 
 ## Introduction
 
-Dans cet atelier nous allons créer une première interface simple avec un peu d'interactif.
+Dans cet atelier, nous allons créer une première interface simple avec un peu d'interactif.
 
 Cela nous permettra de découvrir Xcode, l'organisation d'un projet et le très pratique Interface Builder.
 
-**Notions nécessaires :** MVC, IBOutlet/IBAction, différents types de ficher (.swift, .storyboard, assets), ressources (images, données...), ratio d'image, UILabel et UIImage
+**Notions nécessaires :** MVC, IBOutlet/IBAction, différents types de fichier (.swift, .storyboard, assets), ressources (images, données...), ratio d'image, UILabel et UIImage
 
 ## Exercice 1- Première interface
 
 1. Dans Xcode, créez un projet "Single View App"
-2. Récupérez une image de film et ajoutez la au projet : [james-bond.jpg](https://formation-ios.github.io/tutorialFiles/james-bond.jpg)
-3. Reproduisez l'interface ci-dessous (une image et deux label).
+2. Récupérez une image de film et ajoutez la au projet, par exemple [james-bond.jpg](https://formation-ios.github.io/tutorialFiles/james-bond.jpg)
+3. Reproduisez l'interface ci-dessous (une image et deux labels).
 
 Pour l'instant, ne vous inquiétez pas si le layout s'adapte mal aux tailles d’écrans.
 Dans Interface Builder, sélectionnez "View as iPhone 8", et lancez avec le simulateur iPhone 8 également.

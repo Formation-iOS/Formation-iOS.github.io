@@ -2,7 +2,7 @@
 
 ## Introduction
 
-Dans cet atelier nous allons créer un modèle de données correspondant à la base de [TheMovieDB.org](https://www.themoviedb.org/).
+Dans cet atelier, nous allons créer un modèle de données correspondant à la base de [TheMovieDB.org](https://www.themoviedb.org/).
 
 Cela nous permettra de commencer à utiliser les concepts de Swift, notamment les optionals et les variables.
 
@@ -24,10 +24,10 @@ Le but va être de parser le fichier suivant : [BestMovie.json](https://formatio
 2. Ajoutez le fichier [JSONHelper.swift](https://formation-ios.github.io/tutorialFiles/JSONHelper.swift) \(c'est une classe qui permet de récupérer facilement un tableau de dictionnaires, à partir d'un fichier json local en utilisant `JSONSerialization`\)
 3. Transformez le contenu du fichier en un tableau de dictionnaires
 4. Parcourez ce tableau de dictionnaires pour créer des objets de type Movie correctement remplis. Swift étant fortement typé, pensez à faire un cast (`object as? String` par exemple).
-5. Pour tester que ca marche, faites un print des objets récupérés (astuce : vous pouvez ajouter une variable `description`  à la classe Movie pour indiquer comment print doit afficher un Movie)
+5. Pour tester que ça marche, faites un print des objets récupérés (astuce : vous pouvez ajouter une variable `description`  à la classe Movie pour indiquer comment print doit afficher un Movie)
 
 ## Exercice 3 - Dates
-1. Ajoutez une variable releaseDate à votre classe Movie de type Date
+1. Ajoutez une variable releaseDate, de type Date, à votre classe Movie
 2. Récupérez l'info dans le JSON en utilisant un `DateFormatter` pour passer d'un String à une Date
 
 ## Exercice 4 - Parsing à la mode Swift 4
