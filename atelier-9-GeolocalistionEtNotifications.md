@@ -8,6 +8,8 @@ Cela nous permettra de mettre en place la géolocalisation et les notifications.
 
 **Notions nécessaires :** Gestion des droits utilisateurs, techniques de géolocalisation (déplacements, déplacements signifiants, geofencing, visites), gestion des notifications, debug de position (schema, GPX)
 
+Reprenez le projet Xcode de l'atelier 8, où vous aviez affiché des points d'intérêt sur une carte.
+
 ## Exercice 1 - Positionnez l'utilisateur
 
 Nous allons commencer par placer l'utilisateur sur la carte.
@@ -59,7 +61,7 @@ Note : plutôt que de faire comme l'on vient de faire, il existe une option pour
 
 Le monitoring de régions fonctionne uniquement avec `.authorizedAlways` et pas avec `.authorizedWhenInUse`. Aidons l'utilisateur à comprendre ce qu'il se passe.
 
-1. En cas de `.authorizedWhenInUse`, affichez une alerte pour expliquer à l'utilisateur qu'il ne sera pas tenu au courant s'il arrive dans une zone d'intérêt. Note : vous pouvez utiliser le Pod SwiftMessages pour ce type d'alerte. En étant moins intrusif, vous aurez plus de chance d'être.
+1. En cas de `.authorizedWhenInUse`, affichez une alerte pour expliquer à l'utilisateur qu'il ne sera pas tenu au courant s'il arrive dans une zone d'intérêt. Note : vous pouvez utiliser le Pod SwiftMessages pour ce type d'alerte. En étant moins intrusif, vous aurez plus de chance d'être lu.
 2. Ajoutez un bouton qui permet d'aller changer rapidement l'option de géolocalisation en `.authorizedAlways` dans les réglages du téléphone. Pour cela, utilisez `UIApplication.shared.openURL` et `UIApplicationOpenSettingsURLString`.
 
 ## Exercice bonus - Surveiller une infinité de positions
