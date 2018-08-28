@@ -42,7 +42,7 @@ Le champ texte du mot de passe doit cacher le mot de passe, comme dans la captur
 Dans AppDelegate.swift, activez IQKeyboardManagerSwift en ajoutant la ligne suivante dans la méthode didFinishLaunchingWithOptions :
 
 ```swift
-IQKeyboardManager.sharedManager().enable = true
+IQKeyboardManager.shared.enable = true
 ```
 
 Validez que tout fonctionne correctement en lançant l'application dans le simulateur de l'iPhone SE.
