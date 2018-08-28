@@ -47,9 +47,9 @@ Nous allons maintenant afficher les données issues du JSON plutôt que des donn
 ## Exercice 4 - Ouverture d'un écran de détail spécifique
 1. Implémentez le protocole UITableViewDelegate, notamment la fonction `tableView:didSelectRowAtIndexPath:` pour réagir au click.
 2. Dans cette fonction, il faut :
-    * créer un écran de type DetailViewController (`storyboard.instanciateViewController(identifier:"")`)
+    * créer un écran de type DetailViewController (`storyboard?.instantiateViewController(withIdentifier:"")`)
     * lui donner le bon movie (`detailViewController.movie =`)
-    * le pusher dans le navigationController (`self.navigationController.push(viewController)`).
+    * le pusher dans le navigationController (`navigationController?.pushViewController(detailViewController, animated: true)`).
 
 ## Exercice bonus : ajoutez une image dans la liste
 
