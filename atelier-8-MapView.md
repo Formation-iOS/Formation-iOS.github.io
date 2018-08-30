@@ -18,7 +18,7 @@ Dans ce premier exercice, nous allons placer quelques points rigolos repérés s
 2. Récupérez le fichier [AmazingPlaces.plist](https://formation-ios.github.io/tutorialFiles/AmazingPlaces.plist) et le fichier [FunMapPoint.swift](https://formation-ios.github.io/tutorialFiles/FunMapPoint.swift) pour parser ce plist
 3. Ajoutez une vue MKMapView à l'écran principal, avec le type satelitte, et créez un outlet sur la MapView
 4. Créez une classe FunAnnotation. Cette classe doit :
-        1. avoir un initializer de type `required init(mapPoint: FunMapPoint)`
+        1. avoir un initializer de type `init(mapPoint: FunMapPoint)`
         2. implémenter le protocole `MKAnnotation` (et donc dériver de `NSObject`)
 5. Pour chaque point de votre liste, ajoutez une annotation à la carte (`mapview.addAnnotation`)
 6. Réglez ViewController comme le delegate de la MapView
