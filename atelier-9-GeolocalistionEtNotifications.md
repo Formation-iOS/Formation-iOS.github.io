@@ -52,8 +52,8 @@ Quand l'utilisateur passe dans une zone d'interêt nous allons maintenant lui en
 
 1. Abonnez-vous aux notifications locales. Voir : `UNUserNotificationCenter.current().requestAuthorization` et `UNAuthorizationOptions`
 2. Quand l'utilisateur entre dans une région envoyer une `UNNotificationRequest` avec un `UNMutableNotificationContent` correctement remplis (le titre de l'emplacement par exemple)
-3. Implémentez le protocole `UNUserNotificationCenterDelegate`, ajoutez des print et testez l'application en changeant la position de l'utilisateur via le simulateur ou Xcode
-4. Ajoutez un `UNTimeIntervalNotificationTrigger` comme trigger de votre `UNNotificationRequest`, afin d'avoir le temps de passer l'application en tâche de fond avant que la notification ne soit lancée
+3. Implémentez le protocole `UNUserNotificationCenterDelegate`. Ajoutez des print. Attention, il faut bien appeller les `completionHandler`.
+4.  Testez l'application en changeant la position de l'utilisateur via le simulateur ou Xcode.
 
 Note : plutôt que de faire comme l'on vient de faire, il existe une option pour envoyer automatiquement une notification quand l'utilisateur est proche d'une position avec `UNLocationNotificationTrigger` (https://useyourloaf.com/blog/local-notifications-with-ios-10/)
 
